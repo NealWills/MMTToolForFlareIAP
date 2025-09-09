@@ -1,0 +1,6 @@
+framework module MMTToolForFlareIAP {
+  umbrella header "MMTToolForFlareIAP-umbrella.h"
+
+  export *
+  module * { export * }
+}

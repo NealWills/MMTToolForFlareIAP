@@ -1,0 +1,16 @@
+PODS:
+  - MMTToolForFlareIAP (0.1.0)
+
+DEPENDENCIES:
+  - MMTToolForFlareIAP (from `../`)
+
+EXTERNAL SOURCES:
+  MMTToolForFlareIAP:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MMTToolForFlareIAP: 2db07203bf7b39b5302403114df1aeb4c3fca658
+
+PODFILE CHECKSUM: 86a97fd27c6b438e0f3a67431e36ffaff77c8148
+
+COCOAPODS: 1.16.2

@@ -1,0 +1,8 @@
+use_frameworks!
+
+platform :ios, '13.0'
+
+target 'MMTToolForFlareIAP_Example' do
+  pod 'MMTToolForFlareIAP', :path => '../'
+
+end

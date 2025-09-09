@@ -1,0 +1,1456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07B9C1C4588796A96CC7DB972A960F43 /* StoreProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBE89D08A3D4331CA30A1222D30EE4 /* StoreProduct.swift */; };
+		08423254E1C2856EA7D1529ACBF09AB5 /* IRedeemCodeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF661E04AD4257E4078F2F779C15408F /* IRedeemCodeProvider.swift */; };
+		0BC568116212CCDD69656F8F5F68F8BD /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACAE71F663D56B52C702E3DB816FC7 /* Atomic.swift */; };
+		0DC074AAAFE05E0334D17E1F88590E54 /* Locale+CurrencyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A59A271EE0C8A07FE2F181FD7EFA98 /* Locale+CurrencyCode.swift */; };
+		0E449B906C05B1CE05E410A038830076 /* IStoreProductDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9C4996752591DD21B3B0FAB4411D3C /* IStoreProductDiscount.swift */; };
+		0E8B9FE502140CAE3776B20676145C3C /* PaymentMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53061F75B2B3A84A8F199D3CD7541B /* PaymentMode.swift */; };
+		0EB07D800E375BD7BAB4AA5E291E20BB /* Product.SubscriptionInfo.Status+ISubscriptionInfoStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CA14511DB66546E76F0E98C0085F6 /* Product.SubscriptionInfo.Status+ISubscriptionInfoStatus.swift */; };
+		108C62F4A0598E8E40D4A852D8C8B322 /* IStorePayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DAA407BA788EA78EE296676E64E70B /* IStorePayment.swift */; };
+		12D5E24A0C8F98C50D00DB8A03C88DBD /* SKRequest+IReceiptRefreshRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48E84B39A65022F2D93E66D7A1593B3 /* SKRequest+IReceiptRefreshRequest.swift */; };
+		13C4A1A8A36A70D5A805A6DC11E1250E /* IDispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53C330A157A3EFEA3300A57E8ABD8A4 /* IDispatchQueue.swift */; };
+		176511A847820EFA4FAB3615D2497A7B /* StoreProductDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E39B168B297A282BDEAE7C4073E2F4 /* StoreProductDiscount.swift */; };
+		179A9C1FB26436038CB194AB636903D6 /* IRenewalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63EED1C487FE7017D2B5320B02662A0 /* IRenewalInfo.swift */; };
+		19CD92D08F0E278098F3894C8D32BE6F /* VerificationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290A89930E97B7CAEEABCF5BEAC870F1 /* VerificationResult.swift */; };
+		1AF3CA5D94902ECCA58D991F7A1DD770 /* IFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C477EBEF9869C4485793BC6E3559F55 /* IFileManager.swift */; };
+		1C28577F5ECABDC10E023FF117014320 /* ISubscriptionInfoStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D48DE4D426D595FD6A035331088F2 /* ISubscriptionInfoStatus.swift */; };
+		200E34EF72E7C3210CAFB78E25F27928 /* ProductType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860260D52BB87E87E558565305D51FED /* ProductType+.swift */; };
+		20C8B8EBC94FAFB5E96BBF7C8DA1B8D3 /* PromotionalOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFF3C84FE9772F788B8B6376A26D457 /* PromotionalOffer.swift */; };
+		21B95C90477200027ECD6ACDA46D51E6 /* RefundRequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC141DEEFBB69BA3B6E51C30381624A4 /* RefundRequestStatus.swift */; };
+		24ED8A491DC21E8BA050D6E82817EE61 /* TransactionListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C21A1174854CA9A7C3FA296F8EA889F /* TransactionListener.swift */; };
+		2541C5AF3A87ED51A0039406CFDD86BB /* PaymentQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5754EF8900D1A86D5BE20546E8B4C81E /* PaymentQueue.swift */; };
+		2566D4E62789DE8E45D2EE8B3E2EB2B1 /* RenewalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D7C9E722DB5EAACA24E2E0E893446D /* RenewalState.swift */; };
+		27335F845C9D81F43617BDDB1F49B4A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		279C006E195E954D201EBF7B7E08627A /* IReceiptRefreshProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199B6DB4B4685312250EAD3881B6855 /* IReceiptRefreshProvider.swift */; };
+		2A17A64D99E3E4B3C944509ED88A1A34 /* IConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757783C8394930791FF72CFC28E9393 /* IConfigurationProvider.swift */; };
+		2CDD65AF8DDC31909589BB4C04EE0D42 /* SK2StoreProductDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DF5BEE9C06CF1582E354687D6819E /* SK2StoreProductDiscount.swift */; };
+		2ECB85E924187F87542A6300FA4C0A47 /* IAPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B93931C85F9EB895D4E431866E64A /* IAPError.swift */; };
+		2FC154D4AF45B90DBAAD32BE387EE528 /* SystemInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114B2D4A8F7FC20E9A0E2FB544967AAF /* SystemInfoProvider.swift */; };
+		30228B5CBE89C6668275A26A7174CEFC /* IFlare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334A9436BBA79C517770B2C135217939 /* IFlare.swift */; };
+		38873CCCD86DD4AFAB0909DAE557C385 /* VerificationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2EBC7BF505705F8841A97E746DFE79 /* VerificationError.swift */; };
+		3A3D9A716D1C57F8190E9F9966D51914 /* ReceiptRefreshProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B85801CBCF73659D0EDF0D3B483459 /* ReceiptRefreshProvider.swift */; };
+		3C6FAC7F0F9F59A7832930B7CDEBBBC4 /* MMTToolForFlareIAP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE730F85918A7557B0E3DE3F090584B /* MMTToolForFlareIAP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E36647D3B3954B6CC2D5F5743A7EF03 /* CachingProductsProviderDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EF7B76EA56215B98D30805AFF25043 /* CachingProductsProviderDecorator.swift */; };
+		3F164D35329744D5CB291485334D8E5E /* SK1StoreProductDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F082C1C8A357AEABFC2AAE554180D /* SK1StoreProductDiscount.swift */; };
+		413C17A5E20EE887D0BFBFBDAA4C7DA1 /* SubscriptionInfoStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDA144F060C8F94A0F80778925D173 /* SubscriptionInfoStatus.swift */; };
+		41866DED06AF41A9D9929D5FB7EC77D3 /* Pods-MMTToolForFlareIAP_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5956992C113A9DFD4FABFEFCCCE6C /* Pods-MMTToolForFlareIAP_Example-dummy.m */; };
+		430B215C687C87BB1B395ABE91E5A420 /* IRefundProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E281715A06A6800FF858BFBB519FF5 /* IRefundProvider.swift */; };
+		4375437D1EAB70B966FEE85017618DAC /* IReceiptRefreshRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83259F36C63A69FF208624F45EF549A /* IReceiptRefreshRequestFactory.swift */; };
+		444C50C0CD64A83E4589776E041C53FA /* RenewalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1611F6B7B0764A790DBF46DD125AB9CD /* RenewalInfo.swift */; };
+		4DCB8034781BABB480C58186AEB62AC8 /* IAPProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912D6F80E1582C86481C8F6A9D6507C8 /* IAPProvider.swift */; };
+		4E2C8F9901B5740BD7A496C592EC1C2D /* FetchCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10C6EE74DF4C1686DDE02C4728E47CE /* FetchCachePolicy.swift */; };
+		52C1F16E6A32D4225CCE2E8D05C987D8 /* DiscountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC022235CB1F3206E819EEFF6EF3E5A5 /* DiscountType.swift */; };
+		52DE9D3AF859F3F6C9D3510153C7FE59 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9317E5D6CE94F0C6284D1B9801BD2B8C /* UserDefaults.swift */; };
+		536D2335B6616EE2ECB0778C008F899E /* IRefundRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9F7F76B457DCA7B7F7343BFA3D755 /* IRefundRequestProvider.swift */; };
+		53E72B34F325674D298CB852CA7208EE /* IAppStoreReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E244AFC14DC7B24B12E7A1FF5E069F06 /* IAppStoreReceiptProvider.swift */; };
+		594A11EFDCA3CF13013F36E51D7E6446 /* NumberFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F2A2804919923C603F7DC102370B /* NumberFormatter+.swift */; };
+		5CED35FA2E5EED97238534C1FA0D8482 /* IStoreTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D23D90B5C5CA98C0F6A263B1C90539B /* IStoreTransaction.swift */; };
+		5FA0EE4672A664918246C0D4C0FE6871 /* ISKRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE7E5D2C030C99009282770C55B15F /* ISKRequest.swift */; };
+		609C77D1132B68619026384570258CE5 /* Bundle+IAppStoreReceiptProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253F9F3D593D1BC506AFAEA03703F82C /* Bundle+IAppStoreReceiptProvider.swift */; };
+		61255BB9C40539976DE1DCD4D1CD170F /* ISKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B2B907A869391B5EAE7F4CF7FE891 /* ISKProduct.swift */; };
+		639A18A128D3655E3D70305E04FA461F /* IPurchaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B18F3B617CA8DBAFCB6A6F071B29403 /* IPurchaseProvider.swift */; };
+		6497B717926FF53F022767132EECE218 /* PriceIncreaseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294808D64746ED872F878F16D3E166CB /* PriceIncreaseStatus.swift */; };
+		64F918A7EA5C97BC27F3A352173CC078 /* ProcessInfo+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9716D57331BC5549F4EA4A8B7057DD /* ProcessInfo+.swift */; };
+		68158AA9E46E94E8EA0C922D32E13517 /* IProductProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA02F9B2747C7054F33040E9820BE143 /* IProductProvider.swift */; };
+		6986B6246961524111B369218DAC5C01 /* IUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65483A48126743431CC60EDCAE9124E5 /* IUserDefaults.swift */; };
+		6BA84BDA02273D018A43B7045E8DBF1D /* MMTToolForFlareIAP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD37337C17D2C80C79B528BDB8C9C /* MMTToolForFlareIAP-dummy.m */; };
+		6BB2F2A31B0E88B5019D9FD0A020F184 /* ProductCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BC5A03618993DA9A0D549A6F8A658 /* ProductCategory.swift */; };
+		6C6164BCA04E9672EDD71C252DC1832C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43625170D3DD403C688303F986B91B23 /* Configuration.swift */; };
+		6DD3ABD7B2D5CFE3805CA6C9F3776E02 /* SubscriptionPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686CC195A8882E2F70CBBCFBFD1FCC37 /* SubscriptionPeriod.swift */; };
+		6EAE105D3303D11EDBBD0F635E83FF29 /* SortingProductsProviderDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389215BAFC98F730703BB927D7E923D5 /* SortingProductsProviderDecorator.swift */; };
+		7041996E1EE37571262B8555183D2209 /* ProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A167D33A690E8C157C752D22DFAD606B /* ProductsRequest.swift */; };
+		7072D1BAD6D7388A5796113C94A7D385 /* SKPaymentQueue+PaymentQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7057E484A9C713B62EFA35AF7C1432F9 /* SKPaymentQueue+PaymentQueue.swift */; };
+		73629B3CD0E0FBEBC3FF3AB3754344F1 /* PurchaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6F6B788667EEE22C99432F0D54A05 /* PurchaseProvider.swift */; };
+		7A44570A84A19A9D0AD77BBC80A40513 /* FileManager+IFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036ED4F25F6B32F68A037F2011851CA /* FileManager+IFileManager.swift */; };
+		7AA6DEFAAC8304A9B80FD34D7DE9281F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B594E09201E01204AE91D9CCD63FE /* Strings.swift */; };
+		849AD4285638BB66F9C98FAB4FD22BD5 /* UnfairLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7846D71694891698FB03A12C450FD2 /* UnfairLock.swift */; };
+		867361C934AC5C4B4C90C69F1B58B9CE /* TransactionListenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46BE30318B6635B23F2AB9B27E9285B /* TransactionListenerDelegate.swift */; };
+		8905B465CC5EE1F3B3F0A3F9CF9AF3BD /* SK2SubscriptionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACBB640ECE65C82F12E37D482AD7927 /* SK2SubscriptionInfo.swift */; };
+		89C0F292A09BF5579DCA10FF6774FA4C /* SK1StorePayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C902DACCDFC22A04ABF907282FFCA3D /* SK1StorePayment.swift */; };
+		8F6AFC921E8917241FF72C4633487F48 /* ConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6212C36F5F27ABD0C2947B3B5CE453CC /* ConfigurationProvider.swift */; };
+		8F6BB9819546844C7149FE01A56C616B /* DispatchQueueFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66167FB965320C3DF817F9E4A5427FDC /* DispatchQueueFactory.swift */; };
+		8FF4A507BF5624D4ED7A6E785F2ECC31 /* AsyncHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA7EE6F6EA58888F00CD11797C27235 /* AsyncHandler.swift */; };
+		94CE4F18562D05C5B85EE695E5A67B7A /* TaskFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A45C2F9671975F4C77C9827896B8A4E /* TaskFactory.swift */; };
+		9657579D10F43F2342174942198A412E /* ITaskFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8DC7D4777B5D9C41F04C4F0743742 /* ITaskFactory.swift */; };
+		97816C3DF31A40B79759B90B6A63DCCD /* SK2SubscriptionInfoStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901A76C3257141AA481081369B11D8D6 /* SK2SubscriptionInfoStatus.swift */; };
+		993B2E6A245FDDD39447A16034286E79 /* ISortingProductsProviderDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A213C7A47859004FE8A8C0885D365B /* ISortingProductsProviderDecorator.swift */; };
+		9A61915F97D962CD7ADDD9E4987BD92C /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B0511CEC9B1BE4D2FB9F8103DD2C1C /* Types.swift */; };
+		9A8F5E2E019D1A8AADF9FD970F197F04 /* RedeemCodeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877828334A9B9D732445B6CC30A1528B /* RedeemCodeProvider.swift */; };
+		9C2818F4869DD1C2E843DAE21C665D30 /* RefundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB5D2E43CFF10F45EA9DAB6FCB69AD /* RefundError.swift */; };
+		9E60875E5BBB0FB6E2CDB4ACCBDBC4F8 /* Pods-MMTToolForFlareIAP_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B2B495351EF65F5BFA22FDC76F325B /* Pods-MMTToolForFlareIAP_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A12938588D8A6D5378C692009F0997CD /* IIAPProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86542E21030F2B1D62EBB4888578432 /* IIAPProvider.swift */; };
+		A1391AD75A8B4E3E2178132EE6ED86E2 /* Flare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C3FBF52FA9C44B7DE199E26435417C /* Flare.swift */; };
+		A4D35895D7D36FB625F6BF88E0E1509F /* ISystemInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECAAB464957A488EC0C8AC7D9C545B /* ISystemInfoProvider.swift */; };
+		A65C15E0E9BDE52DA0DCCE54B827712D /* SK2StoreProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23314E04AECE524E2E49A3893673CD5 /* SK2StoreProduct.swift */; };
+		A6812EDF0C846855D7804308F21AAE5A /* RefundRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF5A2336D2A7D9E13ED881B563234D /* RefundRequestProvider.swift */; };
+		AB3CD1096E4DC907B54C0CF25DB9AD0F /* ICachingProductsProviderDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30271E603FAAFBDF5F7666F158D3E34C /* ICachingProductsProviderDecorator.swift */; };
+		AD0E3A03C43EDAFA2102F5472ED1528C /* SK2RenewalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C713E2FF6141884FBF8C025641B7CBD /* SK2RenewalInfo.swift */; };
+		AF7DFE468C2767F0578455923019C71D /* StoreEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C121D2020C0CB7C7B127B435ED012DD /* StoreEnvironment.swift */; };
+		B2292B5AB8D82E576112906382886BB4 /* ISubscriptionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C564E6FA39127108862951FBEF5D7EE2 /* ISubscriptionInfo.swift */; };
+		B3123E351E33CDCA73D682141291F94E /* ITransactionListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E2652078FAC7FE470548BDB159EF5 /* ITransactionListener.swift */; };
+		B36BDED3496908883CD9F524E032AA33 /* ExpirationReason.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3362EF26FE7297E896DE15B4F169D /* ExpirationReason.swift */; };
+		B6B16C4DFAA0FC2A2AA6EC570BD79BBC /* RefundProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FAA8564BA92D482CC371C8383E16F8 /* RefundProvider.swift */; };
+		B79DE02A5A43482E3E6C599B1BE84299 /* SubscriptionEligibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913568D90B06CD41D382F5E1DD40E47 /* SubscriptionEligibility.swift */; };
+		BAA82516CB7283352661DEB659451157 /* SKRequest+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AC5C2279B5B11637818FDEB682FDF /* SKRequest+Identifier.swift */; };
+		BC3D59AF06B70F7B9C33A232DBF8D3DA /* IScenesHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5559F49FF10738BFBC477C6A2C0010 /* IScenesHolder.swift */; };
+		BCFDB49756A9D41783B120F20F14243D /* IEligibilityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C95F40CE55F93395D173D5B12CF3DEB /* IEligibilityProvider.swift */; };
+		BF606C606EBF477F9568D6D6BABA35CE /* EligibilityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DED6C654C2DACBBB017696252047813 /* EligibilityProvider.swift */; };
+		C071D777D05E3CE1A5A45B3608D5CC53 /* ReceiptRefreshRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6107A8BB5DE0F3C6471E5FE608937452 /* ReceiptRefreshRequestFactory.swift */; };
+		C38C56298CA3D0259E876D9F4FB167FB /* ICacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D84A61A307C3AB56552830A79463621 /* ICacheProvider.swift */; };
+		C43DAED1F13672CE5C841B3E73BB00B7 /* IPaymentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F50A5A8A2765DBBDD7190CA530943 /* IPaymentProvider.swift */; };
+		C44FBB7AB3253AA02AD7D1ABF76354AF /* DispatchQueue+IDispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A799224B12F1C201459DAC4116C29667 /* DispatchQueue+IDispatchQueue.swift */; };
+		C6718C4CD32489C5FB1F83261093F01E /* IFlareDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB793A30BC81C11999155D827BB2D9E6 /* IFlareDependencies.swift */; };
+		C798458EF199762616CF197D91B7A1C8 /* SK2StoreTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD6D8624DFD433C9B79C41E4581A362 /* SK2StoreTransaction.swift */; };
+		C9C8DE54004EA9EE5F71CE76C27AB545 /* SK1StoreProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623DD797164C8E7626BBA856293E9F1F /* SK1StoreProduct.swift */; };
+		D4972CAB062A8A945B88E401544FC80B /* ProductProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BA65398A7577CB1ABA50A981624906 /* ProductProvider.swift */; };
+		D79AE78F3733A69436D0D9C64E724424 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		E1EC4ECD6D154A4D1910BBF38507FA5F /* IDispatchQueueFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57F821FB2CBFF31116C35B4E725A310 /* IDispatchQueueFactory.swift */; };
+		E220A3F59BBD5A2709E8BF6CBB9AD6D8 /* StoreTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB100E302E4C6D83D5FA5D178E53C29 /* StoreTransaction.swift */; };
+		E3A2D5767AA83F1C22990286C1CEDFE2 /* PaymentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F358FCF8B187C603B0CBE7580B0E17 /* PaymentProvider.swift */; };
+		E6E7FEFECB0EEE8ABEDBCF7E81CC4B29 /* SubscriptionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC88A4B213FB99B125215C9C9A48D01 /* SubscriptionInfo.swift */; };
+		E95FBD79DEE4120E31028125004FBB7E /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942114A915DC048B024B9C2A2A4F9231 /* ProductType.swift */; };
+		ECEF59F92B5EA77F0C97159276ED2C1C /* CacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C44394FE8503EE929A08C599E97263 /* CacheProvider.swift */; };
+		EE6CDC0EABCED1B5D1C4F966DDC8BF75 /* SKProduct+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03953AF5D187D0BBAF27770AA3ED29E9 /* SKProduct+.swift */; };
+		F0E6698D5246902FE378EAE8BCFF414E /* ILock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AF5BDFE4481BA04FAB6F48DA1EFA62 /* ILock.swift */; };
+		F47EFA64CF72BA50253F862E64A84A5B /* IReceiptRefreshRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638D26E88694E3EDDCFCB077CD6C908 /* IReceiptRefreshRequest.swift */; };
+		F77B0AE29FF68E612663AA33D5F0A422 /* FlareDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11DE6C36D8EC6645D170943121B44A9 /* FlareDependencies.swift */; };
+		F8939656A2378003E65B5213B96D515D /* PaymentTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F460137701CE80247BCA569CBECF9B /* PaymentTransaction.swift */; };
+		FF65845254AD5C4540FCFE6AF9CFA74D /* SK1StoreTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D1E00B0052AC119AA2D266B99ED0A /* SK1StoreTransaction.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92E8A8D86A513F9213F308D00BB76C3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF474BF1473F14F7A90AD0E1B26A7056;
+			remoteInfo = MMTToolForFlareIAP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01F9F7F76B457DCA7B7F7343BFA3D755 /* IRefundRequestProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IRefundRequestProvider.swift; sourceTree = "<group>"; };
+		03953AF5D187D0BBAF27770AA3ED29E9 /* SKProduct+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "SKProduct+.swift"; sourceTree = "<group>"; };
+		0423CC40D6E85D1324B6BAB1F6C68FC8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0B15710F7CC6FB91D0F3167824345C60 /* Pods-MMTToolForFlareIAP_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MMTToolForFlareIAP_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		0C188CAAB77B015317F2B95136ED64E3 /* MMTToolForFlareIAP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MMTToolForFlareIAP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C902DACCDFC22A04ABF907282FFCA3D /* SK1StorePayment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SK1StorePayment.swift; sourceTree = "<group>"; };
+		114B2D4A8F7FC20E9A0E2FB544967AAF /* SystemInfoProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SystemInfoProvider.swift; sourceTree = "<group>"; };
+		12F2F2A2804919923C603F7DC102370B /* NumberFormatter+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+.swift"; sourceTree = "<group>"; };
+		1611F6B7B0764A790DBF46DD125AB9CD /* RenewalInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RenewalInfo.swift; sourceTree = "<group>"; };
+		1B9716D57331BC5549F4EA4A8B7057DD /* ProcessInfo+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+.swift"; sourceTree = "<group>"; };
+		1C713E2FF6141884FBF8C025641B7CBD /* SK2RenewalInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SK2RenewalInfo.swift; sourceTree = "<group>"; };
+		1D23D90B5C5CA98C0F6A263B1C90539B /* IStoreTransaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IStoreTransaction.swift; sourceTree = "<group>"; };
+		23DAA407BA788EA78EE296676E64E70B /* IStorePayment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IStorePayment.swift; sourceTree = "<group>"; };
+		24C15ED53129D082A6C54AB35FA5C890 /* Pods-MMTToolForFlareIAP_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MMTToolForFlareIAP_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		253F9F3D593D1BC506AFAEA03703F82C /* Bundle+IAppStoreReceiptProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bundle+IAppStoreReceiptProvider.swift"; sourceTree = "<group>"; };
+		290A89930E97B7CAEEABCF5BEAC870F1 /* VerificationResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerificationResult.swift; sourceTree = "<group>"; };
+		294808D64746ED872F878F16D3E166CB /* PriceIncreaseStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PriceIncreaseStatus.swift; sourceTree = "<group>"; };
+		2AA7EE6F6EA58888F00CD11797C27235 /* AsyncHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsyncHandler.swift; sourceTree = "<group>"; };
+		2B18F3B617CA8DBAFCB6A6F071B29403 /* IPurchaseProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPurchaseProvider.swift; sourceTree = "<group>"; };
+		2CE730F85918A7557B0E3DE3F090584B /* MMTToolForFlareIAP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMTToolForFlareIAP-umbrella.h"; sourceTree = "<group>"; };
+		30271E603FAAFBDF5F7666F158D3E34C /* ICachingProductsProviderDecorator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ICachingProductsProviderDecorator.swift; sourceTree = "<group>"; };
+		30EF5A2336D2A7D9E13ED881B563234D /* RefundRequestProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RefundRequestProvider.swift; sourceTree = "<group>"; };
+		334A9436BBA79C517770B2C135217939 /* IFlare.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IFlare.swift; path = MMTToolForFlareIAP/Classes/IFlare.swift; sourceTree = "<group>"; };
+		339CA14511DB66546E76F0E98C0085F6 /* Product.SubscriptionInfo.Status+ISubscriptionInfoStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Product.SubscriptionInfo.Status+ISubscriptionInfoStatus.swift"; sourceTree = "<group>"; };
+		34349550292C1AD46036E6C9C07F0DE6 /* MMTToolForFlareIAP.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = MMTToolForFlareIAP.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		37DDA144F060C8F94A0F80778925D173 /* SubscriptionInfoStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubscriptionInfoStatus.swift; sourceTree = "<group>"; };
+		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		389215BAFC98F730703BB927D7E923D5 /* SortingProductsProviderDecorator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SortingProductsProviderDecorator.swift; sourceTree = "<group>"; };
+		38BA65398A7577CB1ABA50A981624906 /* ProductProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProductProvider.swift; sourceTree = "<group>"; };
+		3A45C2F9671975F4C77C9827896B8A4E /* TaskFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TaskFactory.swift; sourceTree = "<group>"; };
+		3C7846D71694891698FB03A12C450FD2 /* UnfairLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UnfairLock.swift; sourceTree = "<group>"; };
+		3DED6C654C2DACBBB017696252047813 /* EligibilityProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EligibilityProvider.swift; sourceTree = "<group>"; };
+		43625170D3DD403C688303F986B91B23 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		45E281715A06A6800FF858BFBB519FF5 /* IRefundProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IRefundProvider.swift; sourceTree = "<group>"; };
+		46A59A271EE0C8A07FE2F181FD7EFA98 /* Locale+CurrencyCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Locale+CurrencyCode.swift"; sourceTree = "<group>"; };
+		4C21A1174854CA9A7C3FA296F8EA889F /* TransactionListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransactionListener.swift; sourceTree = "<group>"; };
+		4D84A61A307C3AB56552830A79463621 /* ICacheProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ICacheProvider.swift; sourceTree = "<group>"; };
+		4EECAAB464957A488EC0C8AC7D9C545B /* ISystemInfoProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ISystemInfoProvider.swift; sourceTree = "<group>"; };
+		4F53061F75B2B3A84A8F199D3CD7541B /* PaymentMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentMode.swift; sourceTree = "<group>"; };
+		50B85801CBCF73659D0EDF0D3B483459 /* ReceiptRefreshProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReceiptRefreshProvider.swift; sourceTree = "<group>"; };
+		519954FC2FF0DCD531A99DE7EE0E0C68 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5199B6DB4B4685312250EAD3881B6855 /* IReceiptRefreshProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IReceiptRefreshProvider.swift; sourceTree = "<group>"; };
+		558F50A5A8A2765DBBDD7190CA530943 /* IPaymentProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IPaymentProvider.swift; sourceTree = "<group>"; };
+		5653DB4E82C9E6471D35277E7ADCC2A5 /* Pods-MMTToolForFlareIAP_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MMTToolForFlareIAP_Example.modulemap"; sourceTree = "<group>"; };
+		5754EF8900D1A86D5BE20546E8B4C81E /* PaymentQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentQueue.swift; sourceTree = "<group>"; };
+		5C477EBEF9869C4485793BC6E3559F55 /* IFileManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IFileManager.swift; sourceTree = "<group>"; };
+		5C5D3B9B871F681EF5DA47DB96F33901 /* Pods-MMTToolForFlareIAP_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MMTToolForFlareIAP_Example.release.xcconfig"; sourceTree = "<group>"; };
+		5F8B594E09201E01204AE91D9CCD63FE /* Strings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		6107A8BB5DE0F3C6471E5FE608937452 /* ReceiptRefreshRequestFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReceiptRefreshRequestFactory.swift; sourceTree = "<group>"; };
+		61B2B495351EF65F5BFA22FDC76F325B /* Pods-MMTToolForFlareIAP_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MMTToolForFlareIAP_Example-umbrella.h"; sourceTree = "<group>"; };
+		61E39B168B297A282BDEAE7C4073E2F4 /* StoreProductDiscount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreProductDiscount.swift; sourceTree = "<group>"; };
+		6212C36F5F27ABD0C2947B3B5CE453CC /* ConfigurationProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConfigurationProvider.swift; sourceTree = "<group>"; };
+		623DD797164C8E7626BBA856293E9F1F /* SK1StoreProduct.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SK1StoreProduct.swift; sourceTree = "<group>"; };
+		6396AFB5E26641DA9CCEA16080032834 /* Pods-MMTToolForFlareIAP_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MMTToolForFlareIAP_Example-Info.plist"; sourceTree = "<group>"; };
+		645D48DE4D426D595FD6A035331088F2 /* ISubscriptionInfoStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ISubscriptionInfoStatus.swift; sourceTree = "<group>"; };
+		65483A48126743431CC60EDCAE9124E5 /* IUserDefaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IUserDefaults.swift; sourceTree = "<group>"; };
+		66167FB965320C3DF817F9E4A5427FDC /* DispatchQueueFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DispatchQueueFactory.swift; sourceTree = "<group>"; };
+		686CC195A8882E2F70CBBCFBFD1FCC37 /* SubscriptionPeriod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubscriptionPeriod.swift; sourceTree = "<group>"; };
+		6BD6D8624DFD433C9B79C41E4581A362 /* SK2StoreTransaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SK2StoreTransaction.swift; sourceTree = "<group>"; };
+		6C95F40CE55F93395D173D5B12CF3DEB /* IEligibilityProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IEligibilityProvider.swift; sourceTree = "<group>"; };
+		6EA6F6B788667EEE22C99432F0D54A05 /* PurchaseProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PurchaseProvider.swift; sourceTree = "<group>"; };
+		7057E484A9C713B62EFA35AF7C1432F9 /* SKPaymentQueue+PaymentQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "SKPaymentQueue+PaymentQueue.swift"; sourceTree = "<group>"; };
+		718AC5C2279B5B11637818FDEB682FDF /* SKRequest+Identifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "SKRequest+Identifier.swift"; sourceTree = "<group>"; };
+		7638D26E88694E3EDDCFCB077CD6C908 /* IReceiptRefreshRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IReceiptRefreshRequest.swift; sourceTree = "<group>"; };
+		76D7C9E722DB5EAACA24E2E0E893446D /* RenewalState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RenewalState.swift; sourceTree = "<group>"; };
+		7913568D90B06CD41D382F5E1DD40E47 /* SubscriptionEligibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubscriptionEligibility.swift; sourceTree = "<group>"; };
+		794E2652078FAC7FE470548BDB159EF5 /* ITransactionListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ITransactionListener.swift; sourceTree = "<group>"; };
+		797B2B907A869391B5EAE7F4CF7FE891 /* ISKProduct.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ISKProduct.swift; sourceTree = "<group>"; };
+		7BBE7E5D2C030C99009282770C55B15F /* ISKRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ISKRequest.swift; sourceTree = "<group>"; };
+		7E2D1E00B0052AC119AA2D266B99ED0A /* SK1StoreTransaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SK1StoreTransaction.swift; sourceTree = "<group>"; };
+		80C44394FE8503EE929A08C599E97263 /* CacheProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CacheProvider.swift; sourceTree = "<group>"; };
+		860260D52BB87E87E558565305D51FED /* ProductType+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ProductType+.swift"; sourceTree = "<group>"; };
+		8757783C8394930791FF72CFC28E9393 /* IConfigurationProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IConfigurationProvider.swift; sourceTree = "<group>"; };
+		877828334A9B9D732445B6CC30A1528B /* RedeemCodeProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RedeemCodeProvider.swift; sourceTree = "<group>"; };
+		88F358FCF8B187C603B0CBE7580B0E17 /* PaymentProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentProvider.swift; sourceTree = "<group>"; };
+		8C121D2020C0CB7C7B127B435ED012DD /* StoreEnvironment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreEnvironment.swift; sourceTree = "<group>"; };
+		8DDBE89D08A3D4331CA30A1222D30EE4 /* StoreProduct.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreProduct.swift; sourceTree = "<group>"; };
+		901A76C3257141AA481081369B11D8D6 /* SK2SubscriptionInfoStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SK2SubscriptionInfoStatus.swift; sourceTree = "<group>"; };
+		90A213C7A47859004FE8A8C0885D365B /* ISortingProductsProviderDecorator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ISortingProductsProviderDecorator.swift; sourceTree = "<group>"; };
+		912D6F80E1582C86481C8F6A9D6507C8 /* IAPProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IAPProvider.swift; sourceTree = "<group>"; };
+		9317E5D6CE94F0C6284D1B9801BD2B8C /* UserDefaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		941F082C1C8A357AEABFC2AAE554180D /* SK1StoreProductDiscount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SK1StoreProductDiscount.swift; sourceTree = "<group>"; };
+		942114A915DC048B024B9C2A2A4F9231 /* ProductType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
+		99F460137701CE80247BCA569CBECF9B /* PaymentTransaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentTransaction.swift; sourceTree = "<group>"; };
+		9B2EBC7BF505705F8841A97E746DFE79 /* VerificationError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerificationError.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DE5956992C113A9DFD4FABFEFCCCE6C /* Pods-MMTToolForFlareIAP_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MMTToolForFlareIAP_Example-dummy.m"; sourceTree = "<group>"; };
+		9FACAE71F663D56B52C702E3DB816FC7 /* Atomic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
+		9FE76E4F459847F29D57FADCF6BECCE3 /* MMTToolForFlareIAP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMTToolForFlareIAP.release.xcconfig; sourceTree = "<group>"; };
+		A167D33A690E8C157C752D22DFAD606B /* ProductsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProductsRequest.swift; sourceTree = "<group>"; };
+		A55DF5BEE9C06CF1582E354687D6819E /* SK2StoreProductDiscount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SK2StoreProductDiscount.swift; sourceTree = "<group>"; };
+		A799224B12F1C201459DAC4116C29667 /* DispatchQueue+IDispatchQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+IDispatchQueue.swift"; sourceTree = "<group>"; };
+		A9FAA8564BA92D482CC371C8383E16F8 /* RefundProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RefundProvider.swift; sourceTree = "<group>"; };
+		AA02F9B2747C7054F33040E9820BE143 /* IProductProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IProductProvider.swift; sourceTree = "<group>"; };
+		AAB3362EF26FE7297E896DE15B4F169D /* ExpirationReason.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExpirationReason.swift; sourceTree = "<group>"; };
+		AACBB640ECE65C82F12E37D482AD7927 /* SK2SubscriptionInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SK2SubscriptionInfo.swift; sourceTree = "<group>"; };
+		AB793A30BC81C11999155D827BB2D9E6 /* IFlareDependencies.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IFlareDependencies.swift; sourceTree = "<group>"; };
+		AC2BA3BEC79FBDDCEC1601800C6CE241 /* MMTToolForFlareIAP-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MMTToolForFlareIAP-Info.plist"; sourceTree = "<group>"; };
+		AEFF3C84FE9772F788B8B6376A26D457 /* PromotionalOffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PromotionalOffer.swift; sourceTree = "<group>"; };
+		AF0C5FDF9D1530C81FF77403190615DA /* MMTToolForFlareIAP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMTToolForFlareIAP.debug.xcconfig; sourceTree = "<group>"; };
+		AF1BC5A03618993DA9A0D549A6F8A658 /* ProductCategory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProductCategory.swift; sourceTree = "<group>"; };
+		B2DB5D2E43CFF10F45EA9DAB6FCB69AD /* RefundError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RefundError.swift; sourceTree = "<group>"; };
+		B46BE30318B6635B23F2AB9B27E9285B /* TransactionListenerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransactionListenerDelegate.swift; sourceTree = "<group>"; };
+		BAC88A4B213FB99B125215C9C9A48D01 /* SubscriptionInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubscriptionInfo.swift; sourceTree = "<group>"; };
+		BC141DEEFBB69BA3B6E51C30381624A4 /* RefundRequestStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RefundRequestStatus.swift; sourceTree = "<group>"; };
+		BF3BD37337C17D2C80C79B528BDB8C9C /* MMTToolForFlareIAP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMTToolForFlareIAP-dummy.m"; sourceTree = "<group>"; };
+		C06B93931C85F9EB895D4E431866E64A /* IAPError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IAPError.swift; sourceTree = "<group>"; };
+		C0EABAC931486CAA5340F492201E1BBC /* MMTToolForFlareIAP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MMTToolForFlareIAP.modulemap; sourceTree = "<group>"; };
+		C11DE6C36D8EC6645D170943121B44A9 /* FlareDependencies.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlareDependencies.swift; sourceTree = "<group>"; };
+		C21E16FCA454692DA0A5DB508E91E81B /* Pods_MMTToolForFlareIAP_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMTToolForFlareIAP_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C48E84B39A65022F2D93E66D7A1593B3 /* SKRequest+IReceiptRefreshRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "SKRequest+IReceiptRefreshRequest.swift"; sourceTree = "<group>"; };
+		C564E6FA39127108862951FBEF5D7EE2 /* ISubscriptionInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ISubscriptionInfo.swift; sourceTree = "<group>"; };
+		C7AF5BDFE4481BA04FAB6F48DA1EFA62 /* ILock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ILock.swift; sourceTree = "<group>"; };
+		CEB100E302E4C6D83D5FA5D178E53C29 /* StoreTransaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreTransaction.swift; sourceTree = "<group>"; };
+		D63EED1C487FE7017D2B5320B02662A0 /* IRenewalInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IRenewalInfo.swift; sourceTree = "<group>"; };
+		D7E8DC7D4777B5D9C41F04C4F0743742 /* ITaskFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ITaskFactory.swift; sourceTree = "<group>"; };
+		D83259F36C63A69FF208624F45EF549A /* IReceiptRefreshRequestFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IReceiptRefreshRequestFactory.swift; sourceTree = "<group>"; };
+		D86542E21030F2B1D62EBB4888578432 /* IIAPProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IIAPProvider.swift; sourceTree = "<group>"; };
+		DB631DACC526F39C411A5E0DE984706D /* MMTToolForFlareIAP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMTToolForFlareIAP-prefix.pch"; sourceTree = "<group>"; };
+		E10C6EE74DF4C1686DDE02C4728E47CE /* FetchCachePolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FetchCachePolicy.swift; sourceTree = "<group>"; };
+		E244AFC14DC7B24B12E7A1FF5E069F06 /* IAppStoreReceiptProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IAppStoreReceiptProvider.swift; sourceTree = "<group>"; };
+		E2EF7B76EA56215B98D30805AFF25043 /* CachingProductsProviderDecorator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CachingProductsProviderDecorator.swift; sourceTree = "<group>"; };
+		E51D7FDBB37A9F4CDF45D102F0BBF0B1 /* Pods-MMTToolForFlareIAP_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MMTToolForFlareIAP_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E57F821FB2CBFF31116C35B4E725A310 /* IDispatchQueueFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDispatchQueueFactory.swift; sourceTree = "<group>"; };
+		E9B0511CEC9B1BE4D2FB9F8103DD2C1C /* Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		EFF45DD8B563877044C12A856EED521B /* Pods-MMTToolForFlareIAP_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MMTToolForFlareIAP_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F036ED4F25F6B32F68A037F2011851CA /* FileManager+IFileManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "FileManager+IFileManager.swift"; sourceTree = "<group>"; };
+		F23314E04AECE524E2E49A3893673CD5 /* SK2StoreProduct.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SK2StoreProduct.swift; sourceTree = "<group>"; };
+		F53C330A157A3EFEA3300A57E8ABD8A4 /* IDispatchQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDispatchQueue.swift; sourceTree = "<group>"; };
+		F8C3FBF52FA9C44B7DE199E26435417C /* Flare.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Flare.swift; path = MMTToolForFlareIAP/Classes/Flare.swift; sourceTree = "<group>"; };
+		FC022235CB1F3206E819EEFF6EF3E5A5 /* DiscountType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DiscountType.swift; sourceTree = "<group>"; };
+		FD9C4996752591DD21B3B0FAB4411D3C /* IStoreProductDiscount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IStoreProductDiscount.swift; sourceTree = "<group>"; };
+		FF5559F49FF10738BFBC477C6A2C0010 /* IScenesHolder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IScenesHolder.swift; sourceTree = "<group>"; };
+		FF661E04AD4257E4078F2F779C15408F /* IRedeemCodeProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IRedeemCodeProvider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1320EB57425A8ED020C4B606F4498B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27335F845C9D81F43617BDDB1F49B4A5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B5B28E521A705CCCE8FFD0B8B89328 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D79AE78F3733A69436D0D9C64E724424 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0897D0B862011F724AC7DC98F96642CA /* Pods-MMTToolForFlareIAP_Example */ = {
+			isa = PBXGroup;
+			children = (
+				5653DB4E82C9E6471D35277E7ADCC2A5 /* Pods-MMTToolForFlareIAP_Example.modulemap */,
+				E51D7FDBB37A9F4CDF45D102F0BBF0B1 /* Pods-MMTToolForFlareIAP_Example-acknowledgements.markdown */,
+				0B15710F7CC6FB91D0F3167824345C60 /* Pods-MMTToolForFlareIAP_Example-acknowledgements.plist */,
+				9DE5956992C113A9DFD4FABFEFCCCE6C /* Pods-MMTToolForFlareIAP_Example-dummy.m */,
+				EFF45DD8B563877044C12A856EED521B /* Pods-MMTToolForFlareIAP_Example-frameworks.sh */,
+				6396AFB5E26641DA9CCEA16080032834 /* Pods-MMTToolForFlareIAP_Example-Info.plist */,
+				61B2B495351EF65F5BFA22FDC76F325B /* Pods-MMTToolForFlareIAP_Example-umbrella.h */,
+				24C15ED53129D082A6C54AB35FA5C890 /* Pods-MMTToolForFlareIAP_Example.debug.xcconfig */,
+				5C5D3B9B871F681EF5DA47DB96F33901 /* Pods-MMTToolForFlareIAP_Example.release.xcconfig */,
+			);
+			name = "Pods-MMTToolForFlareIAP_Example";
+			path = "Target Support Files/Pods-MMTToolForFlareIAP_Example";
+			sourceTree = "<group>";
+		};
+		0A593E7B650341B629857408CBCF2043 /* Concurrency */ = {
+			isa = PBXGroup;
+			children = (
+				ED1FBBE5A281A29EDEFE35275171C08B /* DispatchQueue */,
+				FF8F12496BD748E890817C70AA7F5169 /* DispatchQueueFactory */,
+				FA0CC41666BB78B704DE1A8527DC2AA1 /* TaskFactory */,
+			);
+			name = Concurrency;
+			path = MMTToolForFlareIAP/Classes/Concurrency;
+			sourceTree = "<group>";
+		};
+		0EB0588B028C372AB5AE17108273E913 /* SystemInfoProvider */ = {
+			isa = PBXGroup;
+			children = (
+				4EECAAB464957A488EC0C8AC7D9C545B /* ISystemInfoProvider.swift */,
+				114B2D4A8F7FC20E9A0E2FB544967AAF /* SystemInfoProvider.swift */,
+			);
+			path = SystemInfoProvider;
+			sourceTree = "<group>";
+		};
+		11871D37E0A5D5C9A971EB123F738D22 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				0423CC40D6E85D1324B6BAB1F6C68FC8 /* LICENSE */,
+				34349550292C1AD46036E6C9C07F0DE6 /* MMTToolForFlareIAP.podspec */,
+				519954FC2FF0DCD531A99DE7EE0E0C68 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		1916E9295F37432EB00F91682A4F1CF9 /* IAPProvider */ = {
+			isa = PBXGroup;
+			children = (
+				912D6F80E1582C86481C8F6A9D6507C8 /* IAPProvider.swift */,
+				D86542E21030F2B1D62EBB4888578432 /* IIAPProvider.swift */,
+			);
+			path = IAPProvider;
+			sourceTree = "<group>";
+		};
+		1B97F1175EBB6B63049947ED0A390129 /* PaymentTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				99F460137701CE80247BCA569CBECF9B /* PaymentTransaction.swift */,
+			);
+			path = PaymentTransaction;
+			sourceTree = "<group>";
+		};
+		1FF221140347018B9DBCA2349841C743 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				79956488A50820D439658870E7DDF16E /* AppStoreReceiptProvider */,
+				29BB11B96FF1722A16E5707A7F456D72 /* CacheProvider */,
+				31A073564AB9B867E12CD197EEADFD59 /* ConfigurationProvider */,
+				94024405CBCE18D417DF835CEA892A74 /* EligibilityProvider */,
+				1916E9295F37432EB00F91682A4F1CF9 /* IAPProvider */,
+				684FF5651B3A281E6CF748C3777F6D1D /* PaymentProvider */,
+				81C20AE3FCDBD3D48C1F280EFDC31D31 /* ProductProvider */,
+				BA9DFE80E647EC486AB342F0AB74D2ED /* PurchaseProvider */,
+				7BE718AFADC16E44A2C577E7AC48A723 /* ReceiptRefreshProvider */,
+				CCA462D399760D06AFC09B04F288B727 /* RedeemCodeProvider */,
+				96344CC1152D39FCC9AF8B68C8CC0A7E /* RefundProvider */,
+				EB5491804A2F57FE2A967F8D53F7C3E3 /* RefundRequestProvider */,
+				0EB0588B028C372AB5AE17108273E913 /* SystemInfoProvider */,
+			);
+			name = Providers;
+			path = MMTToolForFlareIAP/Classes/Providers;
+			sourceTree = "<group>";
+		};
+		23A822B8E06572D6583F34E4923D00D6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5738177145F4066BBBDAB6314470B9E4 /* Async */,
+				B0026D79FEA00B6FF265CEE278F2F02B /* FileManager */,
+				953C6280AC4460DE93AB793A1089BD54 /* PaymentQueue */,
+				1B97F1175EBB6B63049947ED0A390129 /* PaymentTransaction */,
+				3827E019F60C94F0FCC73014A8E8CC4A /* ProcessInfo */,
+				DA902DA8989B321A82E954B3F92371D3 /* ScenesHolder */,
+			);
+			name = Helpers;
+			path = MMTToolForFlareIAP/Classes/Helpers;
+			sourceTree = "<group>";
+		};
+		26E288C9AE06E58ED4E74607E96B7797 /* Atomic */ = {
+			isa = PBXGroup;
+			children = (
+				682DCC14D66B8EF75C9E780EB0FB0F5A /* Core */,
+				DED659BA1A7C065A8CB4534538A725A1 /* Helpers */,
+			);
+			name = Atomic;
+			path = MMTToolForFlareIAP/Classes/Atomic;
+			sourceTree = "<group>";
+		};
+		2712FB1731FFFEC74CEA34D90EEE45A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C188CAAB77B015317F2B95136ED64E3 /* MMTToolForFlareIAP.framework */,
+				C21E16FCA454692DA0A5DB508E91E81B /* Pods_MMTToolForFlareIAP_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29BB11B96FF1722A16E5707A7F456D72 /* CacheProvider */ = {
+			isa = PBXGroup;
+			children = (
+				80C44394FE8503EE929A08C599E97263 /* CacheProvider.swift */,
+				4D84A61A307C3AB56552830A79463621 /* ICacheProvider.swift */,
+			);
+			path = CacheProvider;
+			sourceTree = "<group>";
+		};
+		2C8E73A88568B74306CAF1C9724C7443 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0EABAC931486CAA5340F492201E1BBC /* MMTToolForFlareIAP.modulemap */,
+				BF3BD37337C17D2C80C79B528BDB8C9C /* MMTToolForFlareIAP-dummy.m */,
+				AC2BA3BEC79FBDDCEC1601800C6CE241 /* MMTToolForFlareIAP-Info.plist */,
+				DB631DACC526F39C411A5E0DE984706D /* MMTToolForFlareIAP-prefix.pch */,
+				2CE730F85918A7557B0E3DE3F090584B /* MMTToolForFlareIAP-umbrella.h */,
+				AF0C5FDF9D1530C81FF77403190615DA /* MMTToolForFlareIAP.debug.xcconfig */,
+				9FE76E4F459847F29D57FADCF6BECCE3 /* MMTToolForFlareIAP.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MMTToolForFlareIAP";
+			sourceTree = "<group>";
+		};
+		31A073564AB9B867E12CD197EEADFD59 /* ConfigurationProvider */ = {
+			isa = PBXGroup;
+			children = (
+				6212C36F5F27ABD0C2947B3B5CE453CC /* ConfigurationProvider.swift */,
+				8757783C8394930791FF72CFC28E9393 /* IConfigurationProvider.swift */,
+			);
+			path = ConfigurationProvider;
+			sourceTree = "<group>";
+		};
+		3649023FDF6F35FC7A882516AD803033 /* TransactionListener */ = {
+			isa = PBXGroup;
+			children = (
+				794E2652078FAC7FE470548BDB159EF5 /* ITransactionListener.swift */,
+				4C21A1174854CA9A7C3FA296F8EA889F /* TransactionListener.swift */,
+				B46BE30318B6635B23F2AB9B27E9285B /* TransactionListenerDelegate.swift */,
+			);
+			path = TransactionListener;
+			sourceTree = "<group>";
+		};
+		370B557E012B18A6DBC620ED586B1C5B /* SortingProductsProviderDecorator */ = {
+			isa = PBXGroup;
+			children = (
+				90A213C7A47859004FE8A8C0885D365B /* ISortingProductsProviderDecorator.swift */,
+				389215BAFC98F730703BB927D7E923D5 /* SortingProductsProviderDecorator.swift */,
+			);
+			path = SortingProductsProviderDecorator;
+			sourceTree = "<group>";
+		};
+		3827E019F60C94F0FCC73014A8E8CC4A /* ProcessInfo */ = {
+			isa = PBXGroup;
+			children = (
+				1B9716D57331BC5549F4EA4A8B7057DD /* ProcessInfo+.swift */,
+			);
+			path = ProcessInfo;
+			sourceTree = "<group>";
+		};
+		3AA5731662174F003264B258351B7B2A /* MMTToolForFlareIAP */ = {
+			isa = PBXGroup;
+			children = (
+				F8C3FBF52FA9C44B7DE199E26435417C /* Flare.swift */,
+				334A9436BBA79C517770B2C135217939 /* IFlare.swift */,
+				26E288C9AE06E58ED4E74607E96B7797 /* Atomic */,
+				D929210A0115CF5349F4547BF9377F55 /* Common */,
+				0A593E7B650341B629857408CBCF2043 /* Concurrency */,
+				D2722C52BD98F7EA5DEF4096DA65ECED /* DI */,
+				EB9A4BD80535BB8C499F7DE6EC8067C7 /* Extensions */,
+				BCB1618A2B17DCE476F3F04ACF84F3A8 /* Foundation */,
+				BE14D2C46888BF48ED746DF48F274B05 /* Generated */,
+				23A822B8E06572D6583F34E4923D00D6 /* Helpers */,
+				68517ADC7E53003F64A8804BB0BB9E01 /* Listeners */,
+				5104DC8475D1FFBCC18C609D17AC68D6 /* Models */,
+				11871D37E0A5D5C9A971EB123F738D22 /* Pod */,
+				1FF221140347018B9DBCA2349841C743 /* Providers */,
+				2C8E73A88568B74306CAF1C9724C7443 /* Support Files */,
+			);
+			name = MMTToolForFlareIAP;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		4A612BA1D2D2FF2C175B500594D0695D /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				12F2F2A2804919923C603F7DC102370B /* NumberFormatter+.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		4FA4028C7004AEF3EFD0C6753D33B26E /* Atomic */ = {
+			isa = PBXGroup;
+			children = (
+				9FACAE71F663D56B52C702E3DB816FC7 /* Atomic.swift */,
+			);
+			path = Atomic;
+			sourceTree = "<group>";
+		};
+		5104DC8475D1FFBCC18C609D17AC68D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				43625170D3DD403C688303F986B91B23 /* Configuration.swift */,
+				FC022235CB1F3206E819EEFF6EF3E5A5 /* DiscountType.swift */,
+				AAB3362EF26FE7297E896DE15B4F169D /* ExpirationReason.swift */,
+				E10C6EE74DF4C1686DDE02C4728E47CE /* FetchCachePolicy.swift */,
+				C06B93931C85F9EB895D4E431866E64A /* IAPError.swift */,
+				4F53061F75B2B3A84A8F199D3CD7541B /* PaymentMode.swift */,
+				294808D64746ED872F878F16D3E166CB /* PriceIncreaseStatus.swift */,
+				AF1BC5A03618993DA9A0D549A6F8A658 /* ProductCategory.swift */,
+				942114A915DC048B024B9C2A2A4F9231 /* ProductType.swift */,
+				AEFF3C84FE9772F788B8B6376A26D457 /* PromotionalOffer.swift */,
+				B2DB5D2E43CFF10F45EA9DAB6FCB69AD /* RefundError.swift */,
+				BC141DEEFBB69BA3B6E51C30381624A4 /* RefundRequestStatus.swift */,
+				1611F6B7B0764A790DBF46DD125AB9CD /* RenewalInfo.swift */,
+				76D7C9E722DB5EAACA24E2E0E893446D /* RenewalState.swift */,
+				8DDBE89D08A3D4331CA30A1222D30EE4 /* StoreProduct.swift */,
+				61E39B168B297A282BDEAE7C4073E2F4 /* StoreProductDiscount.swift */,
+				CEB100E302E4C6D83D5FA5D178E53C29 /* StoreTransaction.swift */,
+				7913568D90B06CD41D382F5E1DD40E47 /* SubscriptionEligibility.swift */,
+				BAC88A4B213FB99B125215C9C9A48D01 /* SubscriptionInfo.swift */,
+				37DDA144F060C8F94A0F80778925D173 /* SubscriptionInfoStatus.swift */,
+				686CC195A8882E2F70CBBCFBFD1FCC37 /* SubscriptionPeriod.swift */,
+				9B2EBC7BF505705F8841A97E746DFE79 /* VerificationError.swift */,
+				290A89930E97B7CAEEABCF5BEAC870F1 /* VerificationResult.swift */,
+				7C5FB15D3AEEE34CF0A8C78F714ABA81 /* Internal */,
+			);
+			name = Models;
+			path = MMTToolForFlareIAP/Classes/Models;
+			sourceTree = "<group>";
+		};
+		517747DAC36850C5642F5587A2EE8251 /* CachingProductsProviderDecorator */ = {
+			isa = PBXGroup;
+			children = (
+				E2EF7B76EA56215B98D30805AFF25043 /* CachingProductsProviderDecorator.swift */,
+				30271E603FAAFBDF5F7666F158D3E34C /* ICachingProductsProviderDecorator.swift */,
+			);
+			path = CachingProductsProviderDecorator;
+			sourceTree = "<group>";
+		};
+		5738177145F4066BBBDAB6314470B9E4 /* Async */ = {
+			isa = PBXGroup;
+			children = (
+				2AA7EE6F6EA58888F00CD11797C27235 /* AsyncHandler.swift */,
+			);
+			path = Async;
+			sourceTree = "<group>";
+		};
+		682DCC14D66B8EF75C9E780EB0FB0F5A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4FA4028C7004AEF3EFD0C6753D33B26E /* Atomic */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		684FF5651B3A281E6CF748C3777F6D1D /* PaymentProvider */ = {
+			isa = PBXGroup;
+			children = (
+				558F50A5A8A2765DBBDD7190CA530943 /* IPaymentProvider.swift */,
+				88F358FCF8B187C603B0CBE7580B0E17 /* PaymentProvider.swift */,
+			);
+			path = PaymentProvider;
+			sourceTree = "<group>";
+		};
+		68517ADC7E53003F64A8804BB0BB9E01 /* Listeners */ = {
+			isa = PBXGroup;
+			children = (
+				3649023FDF6F35FC7A882516AD803033 /* TransactionListener */,
+			);
+			name = Listeners;
+			path = MMTToolForFlareIAP/Classes/Listeners;
+			sourceTree = "<group>";
+		};
+		6B342F8FA56C78BF0CED6CBACBE3D240 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				7638D26E88694E3EDDCFCB077CD6C908 /* IReceiptRefreshRequest.swift */,
+				CC6B82B608A1687EFD2CE3D5A65C0C3E /* ReceiptRefreshRequestFactory */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		6F6FBC9C6E3E9270535AFE887E319154 /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				46A59A271EE0C8A07FE2F181FD7EFA98 /* Locale+CurrencyCode.swift */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		79956488A50820D439658870E7DDF16E /* AppStoreReceiptProvider */ = {
+			isa = PBXGroup;
+			children = (
+				E244AFC14DC7B24B12E7A1FF5E069F06 /* IAppStoreReceiptProvider.swift */,
+			);
+			path = AppStoreReceiptProvider;
+			sourceTree = "<group>";
+		};
+		7BE718AFADC16E44A2C577E7AC48A723 /* ReceiptRefreshProvider */ = {
+			isa = PBXGroup;
+			children = (
+				5199B6DB4B4685312250EAD3881B6855 /* IReceiptRefreshProvider.swift */,
+				50B85801CBCF73659D0EDF0D3B483459 /* ReceiptRefreshProvider.swift */,
+				6B342F8FA56C78BF0CED6CBACBE3D240 /* Factories */,
+			);
+			path = ReceiptRefreshProvider;
+			sourceTree = "<group>";
+		};
+		7C5FB15D3AEEE34CF0A8C78F714ABA81 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				A167D33A690E8C157C752D22DFAD606B /* ProductsRequest.swift */,
+				0C902DACCDFC22A04ABF907282FFCA3D /* SK1StorePayment.swift */,
+				623DD797164C8E7626BBA856293E9F1F /* SK1StoreProduct.swift */,
+				941F082C1C8A357AEABFC2AAE554180D /* SK1StoreProductDiscount.swift */,
+				7E2D1E00B0052AC119AA2D266B99ED0A /* SK1StoreTransaction.swift */,
+				1C713E2FF6141884FBF8C025641B7CBD /* SK2RenewalInfo.swift */,
+				F23314E04AECE524E2E49A3893673CD5 /* SK2StoreProduct.swift */,
+				A55DF5BEE9C06CF1582E354687D6819E /* SK2StoreProductDiscount.swift */,
+				6BD6D8624DFD433C9B79C41E4581A362 /* SK2StoreTransaction.swift */,
+				AACBB640ECE65C82F12E37D482AD7927 /* SK2SubscriptionInfo.swift */,
+				901A76C3257141AA481081369B11D8D6 /* SK2SubscriptionInfoStatus.swift */,
+				8C121D2020C0CB7C7B127B435ED012DD /* StoreEnvironment.swift */,
+				D350191AFC78C9407F5084F24118024F /* Protocols */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		81C20AE3FCDBD3D48C1F280EFDC31D31 /* ProductProvider */ = {
+			isa = PBXGroup;
+			children = (
+				AA02F9B2747C7054F33040E9820BE143 /* IProductProvider.swift */,
+				38BA65398A7577CB1ABA50A981624906 /* ProductProvider.swift */,
+				BEC39F698D6F517FB4739FD5BAF41233 /* Decorators */,
+			);
+			path = ProductProvider;
+			sourceTree = "<group>";
+		};
+		86C5DC6DC86FEC618E978EC38609EB7B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0897D0B862011F724AC7DC98F96642CA /* Pods-MMTToolForFlareIAP_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		94024405CBCE18D417DF835CEA892A74 /* EligibilityProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3DED6C654C2DACBBB017696252047813 /* EligibilityProvider.swift */,
+				6C95F40CE55F93395D173D5B12CF3DEB /* IEligibilityProvider.swift */,
+			);
+			path = EligibilityProvider;
+			sourceTree = "<group>";
+		};
+		953C6280AC4460DE93AB793A1089BD54 /* PaymentQueue */ = {
+			isa = PBXGroup;
+			children = (
+				5754EF8900D1A86D5BE20546E8B4C81E /* PaymentQueue.swift */,
+				7057E484A9C713B62EFA35AF7C1432F9 /* SKPaymentQueue+PaymentQueue.swift */,
+			);
+			path = PaymentQueue;
+			sourceTree = "<group>";
+		};
+		96344CC1152D39FCC9AF8B68C8CC0A7E /* RefundProvider */ = {
+			isa = PBXGroup;
+			children = (
+				45E281715A06A6800FF858BFBB519FF5 /* IRefundProvider.swift */,
+				A9FAA8564BA92D482CC371C8383E16F8 /* RefundProvider.swift */,
+			);
+			path = RefundProvider;
+			sourceTree = "<group>";
+		};
+		98551AC3CE14678B29A81B595136D92A /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				C7AF5BDFE4481BA04FAB6F48DA1EFA62 /* ILock.swift */,
+				3C7846D71694891698FB03A12C450FD2 /* UnfairLock.swift */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
+		A79C0B48EA2BC934ADBBC8BE0689069F /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				65483A48126743431CC60EDCAE9124E5 /* IUserDefaults.swift */,
+				9317E5D6CE94F0C6284D1B9801BD2B8C /* UserDefaults.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		B0026D79FEA00B6FF265CEE278F2F02B /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C477EBEF9869C4485793BC6E3559F55 /* IFileManager.swift */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		BA9DFE80E647EC486AB342F0AB74D2ED /* PurchaseProvider */ = {
+			isa = PBXGroup;
+			children = (
+				2B18F3B617CA8DBAFCB6A6F071B29403 /* IPurchaseProvider.swift */,
+				6EA6F6B788667EEE22C99432F0D54A05 /* PurchaseProvider.swift */,
+			);
+			path = PurchaseProvider;
+			sourceTree = "<group>";
+		};
+		BCB1618A2B17DCE476F3F04ACF84F3A8 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				A79C0B48EA2BC934ADBBC8BE0689069F /* UserDefaults */,
+			);
+			name = Foundation;
+			path = MMTToolForFlareIAP/Classes/Foundation;
+			sourceTree = "<group>";
+		};
+		BE14D2C46888BF48ED746DF48F274B05 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				5F8B594E09201E01204AE91D9CCD63FE /* Strings.swift */,
+			);
+			name = Generated;
+			path = MMTToolForFlareIAP/Classes/Generated;
+			sourceTree = "<group>";
+		};
+		BEC39F698D6F517FB4739FD5BAF41233 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				517747DAC36850C5642F5587A2EE8251 /* CachingProductsProviderDecorator */,
+				370B557E012B18A6DBC620ED586B1C5B /* SortingProductsProviderDecorator */,
+			);
+			path = Decorators;
+			sourceTree = "<group>";
+		};
+		CC6B82B608A1687EFD2CE3D5A65C0C3E /* ReceiptRefreshRequestFactory */ = {
+			isa = PBXGroup;
+			children = (
+				D83259F36C63A69FF208624F45EF549A /* IReceiptRefreshRequestFactory.swift */,
+				6107A8BB5DE0F3C6471E5FE608937452 /* ReceiptRefreshRequestFactory.swift */,
+			);
+			path = ReceiptRefreshRequestFactory;
+			sourceTree = "<group>";
+		};
+		CCA462D399760D06AFC09B04F288B727 /* RedeemCodeProvider */ = {
+			isa = PBXGroup;
+			children = (
+				FF661E04AD4257E4078F2F779C15408F /* IRedeemCodeProvider.swift */,
+				877828334A9B9D732445B6CC30A1528B /* RedeemCodeProvider.swift */,
+			);
+			path = RedeemCodeProvider;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				F90AC05DFB2C2F46F12459BC4D55533D /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				2712FB1731FFFEC74CEA34D90EEE45A6 /* Products */,
+				86C5DC6DC86FEC618E978EC38609EB7B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2722C52BD98F7EA5DEF4096DA65ECED /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				C11DE6C36D8EC6645D170943121B44A9 /* FlareDependencies.swift */,
+				AB793A30BC81C11999155D827BB2D9E6 /* IFlareDependencies.swift */,
+			);
+			name = DI;
+			path = MMTToolForFlareIAP/Classes/DI;
+			sourceTree = "<group>";
+		};
+		D350191AFC78C9407F5084F24118024F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D63EED1C487FE7017D2B5320B02662A0 /* IRenewalInfo.swift */,
+				797B2B907A869391B5EAE7F4CF7FE891 /* ISKProduct.swift */,
+				7BBE7E5D2C030C99009282770C55B15F /* ISKRequest.swift */,
+				23DAA407BA788EA78EE296676E64E70B /* IStorePayment.swift */,
+				FD9C4996752591DD21B3B0FAB4411D3C /* IStoreProductDiscount.swift */,
+				1D23D90B5C5CA98C0F6A263B1C90539B /* IStoreTransaction.swift */,
+				C564E6FA39127108862951FBEF5D7EE2 /* ISubscriptionInfo.swift */,
+				645D48DE4D426D595FD6A035331088F2 /* ISubscriptionInfoStatus.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D929210A0115CF5349F4547BF9377F55 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E9B0511CEC9B1BE4D2FB9F8103DD2C1C /* Types.swift */,
+			);
+			name = Common;
+			path = MMTToolForFlareIAP/Classes/Common;
+			sourceTree = "<group>";
+		};
+		DA902DA8989B321A82E954B3F92371D3 /* ScenesHolder */ = {
+			isa = PBXGroup;
+			children = (
+				FF5559F49FF10738BFBC477C6A2C0010 /* IScenesHolder.swift */,
+			);
+			path = ScenesHolder;
+			sourceTree = "<group>";
+		};
+		DED659BA1A7C065A8CB4534538A725A1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				98551AC3CE14678B29A81B595136D92A /* Lock */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EB5491804A2F57FE2A967F8D53F7C3E3 /* RefundRequestProvider */ = {
+			isa = PBXGroup;
+			children = (
+				01F9F7F76B457DCA7B7F7343BFA3D755 /* IRefundRequestProvider.swift */,
+				30EF5A2336D2A7D9E13ED881B563234D /* RefundRequestProvider.swift */,
+			);
+			path = RefundRequestProvider;
+			sourceTree = "<group>";
+		};
+		EB9A4BD80535BB8C499F7DE6EC8067C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				253F9F3D593D1BC506AFAEA03703F82C /* Bundle+IAppStoreReceiptProvider.swift */,
+				F036ED4F25F6B32F68A037F2011851CA /* FileManager+IFileManager.swift */,
+				339CA14511DB66546E76F0E98C0085F6 /* Product.SubscriptionInfo.Status+ISubscriptionInfoStatus.swift */,
+				860260D52BB87E87E558565305D51FED /* ProductType+.swift */,
+				03953AF5D187D0BBAF27770AA3ED29E9 /* SKProduct+.swift */,
+				718AC5C2279B5B11637818FDEB682FDF /* SKRequest+Identifier.swift */,
+				C48E84B39A65022F2D93E66D7A1593B3 /* SKRequest+IReceiptRefreshRequest.swift */,
+				4A612BA1D2D2FF2C175B500594D0695D /* Formatters */,
+				6F6FBC9C6E3E9270535AFE887E319154 /* Locale */,
+			);
+			name = Extensions;
+			path = MMTToolForFlareIAP/Classes/Extensions;
+			sourceTree = "<group>";
+		};
+		ED1FBBE5A281A29EDEFE35275171C08B /* DispatchQueue */ = {
+			isa = PBXGroup;
+			children = (
+				A799224B12F1C201459DAC4116C29667 /* DispatchQueue+IDispatchQueue.swift */,
+				F53C330A157A3EFEA3300A57E8ABD8A4 /* IDispatchQueue.swift */,
+			);
+			path = DispatchQueue;
+			sourceTree = "<group>";
+		};
+		F90AC05DFB2C2F46F12459BC4D55533D /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AA5731662174F003264B258351B7B2A /* MMTToolForFlareIAP */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FA0CC41666BB78B704DE1A8527DC2AA1 /* TaskFactory */ = {
+			isa = PBXGroup;
+			children = (
+				D7E8DC7D4777B5D9C41F04C4F0743742 /* ITaskFactory.swift */,
+				3A45C2F9671975F4C77C9827896B8A4E /* TaskFactory.swift */,
+			);
+			path = TaskFactory;
+			sourceTree = "<group>";
+		};
+		FF8F12496BD748E890817C70AA7F5169 /* DispatchQueueFactory */ = {
+			isa = PBXGroup;
+			children = (
+				66167FB965320C3DF817F9E4A5427FDC /* DispatchQueueFactory.swift */,
+				E57F821FB2CBFF31116C35B4E725A310 /* IDispatchQueueFactory.swift */,
+			);
+			path = DispatchQueueFactory;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		11BEA77B5FA8E2E7384CE995C8A5B115 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C6FAC7F0F9F59A7832930B7CDEBBBC4 /* MMTToolForFlareIAP-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EF6BC765F598F8EEAA9AEC63B7CB4F9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E60875E5BBB0FB6E2CDB4ACCBDBC4F8 /* Pods-MMTToolForFlareIAP_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F0D2B3A0F81214B389D3FDE13EB9539E /* Pods-MMTToolForFlareIAP_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 436729EA57DEC1C6C7B97B2718DEDC79 /* Build configuration list for PBXNativeTarget "Pods-MMTToolForFlareIAP_Example" */;
+			buildPhases = (
+				6EF6BC765F598F8EEAA9AEC63B7CB4F9 /* Headers */,
+				D4E2E8409C92F9EC1C7F35B64020E89B /* Sources */,
+				47B5B28E521A705CCCE8FFD0B8B89328 /* Frameworks */,
+				00817C99F83EB07AF05F0982221D8297 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5564D8EFF6AC9749A9A799A80CC5938 /* PBXTargetDependency */,
+			);
+			name = "Pods-MMTToolForFlareIAP_Example";
+			productName = Pods_MMTToolForFlareIAP_Example;
+			productReference = C21E16FCA454692DA0A5DB508E91E81B /* Pods_MMTToolForFlareIAP_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FF474BF1473F14F7A90AD0E1B26A7056 /* MMTToolForFlareIAP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E64E3BD6A21E71FF1E981610B39ADD63 /* Build configuration list for PBXNativeTarget "MMTToolForFlareIAP" */;
+			buildPhases = (
+				11BEA77B5FA8E2E7384CE995C8A5B115 /* Headers */,
+				270F6A1786AC8CB2FCD4986BE02B2A7A /* Sources */,
+				1320EB57425A8ED020C4B606F4498B23 /* Frameworks */,
+				B6E60137CD0AED588810F12C8123BFCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MMTToolForFlareIAP;
+			productName = MMTToolForFlareIAP;
+			productReference = 0C188CAAB77B015317F2B95136ED64E3 /* MMTToolForFlareIAP.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 2712FB1731FFFEC74CEA34D90EEE45A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF474BF1473F14F7A90AD0E1B26A7056 /* MMTToolForFlareIAP */,
+				F0D2B3A0F81214B389D3FDE13EB9539E /* Pods-MMTToolForFlareIAP_Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00817C99F83EB07AF05F0982221D8297 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6E60137CD0AED588810F12C8123BFCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		270F6A1786AC8CB2FCD4986BE02B2A7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF4A507BF5624D4ED7A6E785F2ECC31 /* AsyncHandler.swift in Sources */,
+				0BC568116212CCDD69656F8F5F68F8BD /* Atomic.swift in Sources */,
+				609C77D1132B68619026384570258CE5 /* Bundle+IAppStoreReceiptProvider.swift in Sources */,
+				ECEF59F92B5EA77F0C97159276ED2C1C /* CacheProvider.swift in Sources */,
+				3E36647D3B3954B6CC2D5F5743A7EF03 /* CachingProductsProviderDecorator.swift in Sources */,
+				6C6164BCA04E9672EDD71C252DC1832C /* Configuration.swift in Sources */,
+				8F6AFC921E8917241FF72C4633487F48 /* ConfigurationProvider.swift in Sources */,
+				52C1F16E6A32D4225CCE2E8D05C987D8 /* DiscountType.swift in Sources */,
+				C44FBB7AB3253AA02AD7D1ABF76354AF /* DispatchQueue+IDispatchQueue.swift in Sources */,
+				8F6BB9819546844C7149FE01A56C616B /* DispatchQueueFactory.swift in Sources */,
+				BF606C606EBF477F9568D6D6BABA35CE /* EligibilityProvider.swift in Sources */,
+				B36BDED3496908883CD9F524E032AA33 /* ExpirationReason.swift in Sources */,
+				4E2C8F9901B5740BD7A496C592EC1C2D /* FetchCachePolicy.swift in Sources */,
+				7A44570A84A19A9D0AD77BBC80A40513 /* FileManager+IFileManager.swift in Sources */,
+				A1391AD75A8B4E3E2178132EE6ED86E2 /* Flare.swift in Sources */,
+				F77B0AE29FF68E612663AA33D5F0A422 /* FlareDependencies.swift in Sources */,
+				2ECB85E924187F87542A6300FA4C0A47 /* IAPError.swift in Sources */,
+				4DCB8034781BABB480C58186AEB62AC8 /* IAPProvider.swift in Sources */,
+				53E72B34F325674D298CB852CA7208EE /* IAppStoreReceiptProvider.swift in Sources */,
+				C38C56298CA3D0259E876D9F4FB167FB /* ICacheProvider.swift in Sources */,
+				AB3CD1096E4DC907B54C0CF25DB9AD0F /* ICachingProductsProviderDecorator.swift in Sources */,
+				2A17A64D99E3E4B3C944509ED88A1A34 /* IConfigurationProvider.swift in Sources */,
+				13C4A1A8A36A70D5A805A6DC11E1250E /* IDispatchQueue.swift in Sources */,
+				E1EC4ECD6D154A4D1910BBF38507FA5F /* IDispatchQueueFactory.swift in Sources */,
+				BCFDB49756A9D41783B120F20F14243D /* IEligibilityProvider.swift in Sources */,
+				1AF3CA5D94902ECCA58D991F7A1DD770 /* IFileManager.swift in Sources */,
+				30228B5CBE89C6668275A26A7174CEFC /* IFlare.swift in Sources */,
+				C6718C4CD32489C5FB1F83261093F01E /* IFlareDependencies.swift in Sources */,
+				A12938588D8A6D5378C692009F0997CD /* IIAPProvider.swift in Sources */,
+				F0E6698D5246902FE378EAE8BCFF414E /* ILock.swift in Sources */,
+				C43DAED1F13672CE5C841B3E73BB00B7 /* IPaymentProvider.swift in Sources */,
+				68158AA9E46E94E8EA0C922D32E13517 /* IProductProvider.swift in Sources */,
+				639A18A128D3655E3D70305E04FA461F /* IPurchaseProvider.swift in Sources */,
+				279C006E195E954D201EBF7B7E08627A /* IReceiptRefreshProvider.swift in Sources */,
+				F47EFA64CF72BA50253F862E64A84A5B /* IReceiptRefreshRequest.swift in Sources */,
+				4375437D1EAB70B966FEE85017618DAC /* IReceiptRefreshRequestFactory.swift in Sources */,
+				08423254E1C2856EA7D1529ACBF09AB5 /* IRedeemCodeProvider.swift in Sources */,
+				430B215C687C87BB1B395ABE91E5A420 /* IRefundProvider.swift in Sources */,
+				536D2335B6616EE2ECB0778C008F899E /* IRefundRequestProvider.swift in Sources */,
+				179A9C1FB26436038CB194AB636903D6 /* IRenewalInfo.swift in Sources */,
+				BC3D59AF06B70F7B9C33A232DBF8D3DA /* IScenesHolder.swift in Sources */,
+				61255BB9C40539976DE1DCD4D1CD170F /* ISKProduct.swift in Sources */,
+				5FA0EE4672A664918246C0D4C0FE6871 /* ISKRequest.swift in Sources */,
+				993B2E6A245FDDD39447A16034286E79 /* ISortingProductsProviderDecorator.swift in Sources */,
+				108C62F4A0598E8E40D4A852D8C8B322 /* IStorePayment.swift in Sources */,
+				0E449B906C05B1CE05E410A038830076 /* IStoreProductDiscount.swift in Sources */,
+				5CED35FA2E5EED97238534C1FA0D8482 /* IStoreTransaction.swift in Sources */,
+				B2292B5AB8D82E576112906382886BB4 /* ISubscriptionInfo.swift in Sources */,
+				1C28577F5ECABDC10E023FF117014320 /* ISubscriptionInfoStatus.swift in Sources */,
+				A4D35895D7D36FB625F6BF88E0E1509F /* ISystemInfoProvider.swift in Sources */,
+				9657579D10F43F2342174942198A412E /* ITaskFactory.swift in Sources */,
+				B3123E351E33CDCA73D682141291F94E /* ITransactionListener.swift in Sources */,
+				6986B6246961524111B369218DAC5C01 /* IUserDefaults.swift in Sources */,
+				0DC074AAAFE05E0334D17E1F88590E54 /* Locale+CurrencyCode.swift in Sources */,
+				6BA84BDA02273D018A43B7045E8DBF1D /* MMTToolForFlareIAP-dummy.m in Sources */,
+				594A11EFDCA3CF13013F36E51D7E6446 /* NumberFormatter+.swift in Sources */,
+				0E8B9FE502140CAE3776B20676145C3C /* PaymentMode.swift in Sources */,
+				E3A2D5767AA83F1C22990286C1CEDFE2 /* PaymentProvider.swift in Sources */,
+				2541C5AF3A87ED51A0039406CFDD86BB /* PaymentQueue.swift in Sources */,
+				F8939656A2378003E65B5213B96D515D /* PaymentTransaction.swift in Sources */,
+				6497B717926FF53F022767132EECE218 /* PriceIncreaseStatus.swift in Sources */,
+				64F918A7EA5C97BC27F3A352173CC078 /* ProcessInfo+.swift in Sources */,
+				0EB07D800E375BD7BAB4AA5E291E20BB /* Product.SubscriptionInfo.Status+ISubscriptionInfoStatus.swift in Sources */,
+				6BB2F2A31B0E88B5019D9FD0A020F184 /* ProductCategory.swift in Sources */,
+				D4972CAB062A8A945B88E401544FC80B /* ProductProvider.swift in Sources */,
+				7041996E1EE37571262B8555183D2209 /* ProductsRequest.swift in Sources */,
+				E95FBD79DEE4120E31028125004FBB7E /* ProductType.swift in Sources */,
+				200E34EF72E7C3210CAFB78E25F27928 /* ProductType+.swift in Sources */,
+				20C8B8EBC94FAFB5E96BBF7C8DA1B8D3 /* PromotionalOffer.swift in Sources */,
+				73629B3CD0E0FBEBC3FF3AB3754344F1 /* PurchaseProvider.swift in Sources */,
+				3A3D9A716D1C57F8190E9F9966D51914 /* ReceiptRefreshProvider.swift in Sources */,
+				C071D777D05E3CE1A5A45B3608D5CC53 /* ReceiptRefreshRequestFactory.swift in Sources */,
+				9A8F5E2E019D1A8AADF9FD970F197F04 /* RedeemCodeProvider.swift in Sources */,
+				9C2818F4869DD1C2E843DAE21C665D30 /* RefundError.swift in Sources */,
+				B6B16C4DFAA0FC2A2AA6EC570BD79BBC /* RefundProvider.swift in Sources */,
+				A6812EDF0C846855D7804308F21AAE5A /* RefundRequestProvider.swift in Sources */,
+				21B95C90477200027ECD6ACDA46D51E6 /* RefundRequestStatus.swift in Sources */,
+				444C50C0CD64A83E4589776E041C53FA /* RenewalInfo.swift in Sources */,
+				2566D4E62789DE8E45D2EE8B3E2EB2B1 /* RenewalState.swift in Sources */,
+				89C0F292A09BF5579DCA10FF6774FA4C /* SK1StorePayment.swift in Sources */,
+				C9C8DE54004EA9EE5F71CE76C27AB545 /* SK1StoreProduct.swift in Sources */,
+				3F164D35329744D5CB291485334D8E5E /* SK1StoreProductDiscount.swift in Sources */,
+				FF65845254AD5C4540FCFE6AF9CFA74D /* SK1StoreTransaction.swift in Sources */,
+				AD0E3A03C43EDAFA2102F5472ED1528C /* SK2RenewalInfo.swift in Sources */,
+				A65C15E0E9BDE52DA0DCCE54B827712D /* SK2StoreProduct.swift in Sources */,
+				2CDD65AF8DDC31909589BB4C04EE0D42 /* SK2StoreProductDiscount.swift in Sources */,
+				C798458EF199762616CF197D91B7A1C8 /* SK2StoreTransaction.swift in Sources */,
+				8905B465CC5EE1F3B3F0A3F9CF9AF3BD /* SK2SubscriptionInfo.swift in Sources */,
+				97816C3DF31A40B79759B90B6A63DCCD /* SK2SubscriptionInfoStatus.swift in Sources */,
+				7072D1BAD6D7388A5796113C94A7D385 /* SKPaymentQueue+PaymentQueue.swift in Sources */,
+				EE6CDC0EABCED1B5D1C4F966DDC8BF75 /* SKProduct+.swift in Sources */,
+				BAA82516CB7283352661DEB659451157 /* SKRequest+Identifier.swift in Sources */,
+				12D5E24A0C8F98C50D00DB8A03C88DBD /* SKRequest+IReceiptRefreshRequest.swift in Sources */,
+				6EAE105D3303D11EDBBD0F635E83FF29 /* SortingProductsProviderDecorator.swift in Sources */,
+				AF7DFE468C2767F0578455923019C71D /* StoreEnvironment.swift in Sources */,
+				07B9C1C4588796A96CC7DB972A960F43 /* StoreProduct.swift in Sources */,
+				176511A847820EFA4FAB3615D2497A7B /* StoreProductDiscount.swift in Sources */,
+				E220A3F59BBD5A2709E8BF6CBB9AD6D8 /* StoreTransaction.swift in Sources */,
+				7AA6DEFAAC8304A9B80FD34D7DE9281F /* Strings.swift in Sources */,
+				B79DE02A5A43482E3E6C599B1BE84299 /* SubscriptionEligibility.swift in Sources */,
+				E6E7FEFECB0EEE8ABEDBCF7E81CC4B29 /* SubscriptionInfo.swift in Sources */,
+				413C17A5E20EE887D0BFBFBDAA4C7DA1 /* SubscriptionInfoStatus.swift in Sources */,
+				6DD3ABD7B2D5CFE3805CA6C9F3776E02 /* SubscriptionPeriod.swift in Sources */,
+				2FC154D4AF45B90DBAAD32BE387EE528 /* SystemInfoProvider.swift in Sources */,
+				94CE4F18562D05C5B85EE695E5A67B7A /* TaskFactory.swift in Sources */,
+				24ED8A491DC21E8BA050D6E82817EE61 /* TransactionListener.swift in Sources */,
+				867361C934AC5C4B4C90C69F1B58B9CE /* TransactionListenerDelegate.swift in Sources */,
+				9A61915F97D962CD7ADDD9E4987BD92C /* Types.swift in Sources */,
+				849AD4285638BB66F9C98FAB4FD22BD5 /* UnfairLock.swift in Sources */,
+				52DE9D3AF859F3F6C9D3510153C7FE59 /* UserDefaults.swift in Sources */,
+				38873CCCD86DD4AFAB0909DAE557C385 /* VerificationError.swift in Sources */,
+				19CD92D08F0E278098F3894C8D32BE6F /* VerificationResult.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E2E8409C92F9EC1C7F35B64020E89B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41866DED06AF41A9D9929D5FB7EC77D3 /* Pods-MMTToolForFlareIAP_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D5564D8EFF6AC9749A9A799A80CC5938 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MMTToolForFlareIAP;
+			target = FF474BF1473F14F7A90AD0E1B26A7056 /* MMTToolForFlareIAP */;
+			targetProxy = 92E8A8D86A513F9213F308D00BB76C3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5DB18D1EA1777792257DCF46B7087DF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C5D3B9B871F681EF5DA47DB96F33901 /* Pods-MMTToolForFlareIAP_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-MMTToolForFlareIAP_Example/Pods-MMTToolForFlareIAP_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MMTToolForFlareIAP_Example/Pods-MMTToolForFlareIAP_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		80D1687701784084C3FFF1ECA85470A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF0C5FDF9D1530C81FF77403190615DA /* MMTToolForFlareIAP.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/MMTToolForFlareIAP/MMTToolForFlareIAP-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/MMTToolForFlareIAP/MMTToolForFlareIAP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MMTToolForFlareIAP/MMTToolForFlareIAP.modulemap";
+				PRODUCT_MODULE_NAME = MMTToolForFlareIAP;
+				PRODUCT_NAME = MMTToolForFlareIAP;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		860F58C3B14145BEE04B73610151FCDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24C15ED53129D082A6C54AB35FA5C890 /* Pods-MMTToolForFlareIAP_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-MMTToolForFlareIAP_Example/Pods-MMTToolForFlareIAP_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MMTToolForFlareIAP_Example/Pods-MMTToolForFlareIAP_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C72CE31B356ECA56CBDF8A157F1C8674 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FE76E4F459847F29D57FADCF6BECCE3 /* MMTToolForFlareIAP.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/MMTToolForFlareIAP/MMTToolForFlareIAP-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/MMTToolForFlareIAP/MMTToolForFlareIAP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MMTToolForFlareIAP/MMTToolForFlareIAP.modulemap";
+				PRODUCT_MODULE_NAME = MMTToolForFlareIAP;
+				PRODUCT_NAME = MMTToolForFlareIAP;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		436729EA57DEC1C6C7B97B2718DEDC79 /* Build configuration list for PBXNativeTarget "Pods-MMTToolForFlareIAP_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				860F58C3B14145BEE04B73610151FCDB /* Debug */,
+				5DB18D1EA1777792257DCF46B7087DF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E64E3BD6A21E71FF1E981610B39ADD63 /* Build configuration list for PBXNativeTarget "MMTToolForFlareIAP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D1687701784084C3FFF1ECA85470A7 /* Debug */,
+				C72CE31B356ECA56CBDF8A157F1C8674 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

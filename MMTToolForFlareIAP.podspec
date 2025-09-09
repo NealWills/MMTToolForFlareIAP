@@ -25,10 +25,10 @@ IAP Tool for MMT, easy to use.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Donghn' => 'Donghn@maxeye.com' }
-  s.source           = { :git => 'https://github.com/Donghn/MMTToolForFlareIAP.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/NealWills/MMTToolForFlareIAP.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'MMTToolForFlareIAP/Classes/**/*'
   

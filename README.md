@@ -1,6 +1,4 @@
-!**[**Header Image**]**(Resources/MMTToolForFlareIAP.png)
-
-
+![image](Resources/MMTToolForFlareIAP.png)
 
 # MMTToolForFlareIAP
 

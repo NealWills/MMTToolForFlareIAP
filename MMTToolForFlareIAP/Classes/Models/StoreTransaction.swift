@@ -49,12 +49,17 @@ extension StoreTransaction {
 // MARK: IStoreTransaction
 
 extension StoreTransaction: IStoreTransaction {
+
     public var productIdentifier: String {
         storeTransaction.productIdentifier
     }
 
     public var purchaseDate: Date {
         storeTransaction.purchaseDate
+    }
+
+    var expirationDate: Date? {
+        storeTransaction.expirationDate
     }
 
     public var hasKnownPurchaseDate: Bool {

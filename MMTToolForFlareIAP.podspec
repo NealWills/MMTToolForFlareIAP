@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MMTToolForFlareIAP'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'A convenient wrapper and packaging tool for Flare IAP'
 
 # This description is used to generate tags and improve search results.
@@ -22,6 +22,12 @@ MMTToolForFlareIAP is a comprehensive wrapper and packaging tool for the Flare I
 It provides a simplified and unified API for implementing in-app purchases (IAP) in iOS applications.
 This library makes it easy to integrate subscription and transaction management into your projects with minimal boilerplate code.
 Built on top of the robust Flare framework, MMTToolForFlareIAP offers an out-of-the-box IAP solution.
+
+Features:
+- Simplified subscription management API
+- Transaction verification and handling
+- Receipt validation and processing
+- Subscription expiration time query support
                        DESC
 
   s.homepage         = 'https://github.com/NealWills/MMTToolForFlareIAP.git'

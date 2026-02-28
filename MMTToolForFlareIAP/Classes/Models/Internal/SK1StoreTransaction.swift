@@ -27,6 +27,8 @@ struct SK1StoreTransaction {
 // MARK: IStoreTransaction
 
 extension SK1StoreTransaction: IStoreTransaction {
+
+    
     var productIdentifier: String {
         transaction.productIdentifier
     }
@@ -36,6 +38,10 @@ extension SK1StoreTransaction: IStoreTransaction {
             return Date(timeIntervalSince1970: 0)
         }
         return date
+    }
+
+    var expirationDate: Date? {
+        return nil
     }
 
     var hasKnownPurchaseDate: Bool {

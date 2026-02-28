@@ -9,7 +9,7 @@
 
 ## Overview
 
-MMTToolForFlareIAP is a comprehensive wrapper and packaging tool for the Flare IAP framework. It provides a simplified and unified API for implementing in-app purchases (IAP) in iOS applications, built on top of the robust Flare framework. This library makes it easy to integrate subscription and transaction management into your MMT projects with minimal boilerplate code.
+MMTToolForFlareIAP is a comprehensive wrapper and packaging tool for the Flare IAP framework (synced with Flare 3.3.0). It provides a simplified and unified API for implementing in-app purchases (IAP) in iOS applications, built on top of the robust Flare framework. This library makes it easy to integrate subscription and transaction management into your MMT projects with minimal boilerplate code.
 
 ## Features
 
@@ -20,6 +20,10 @@ MMTToolForFlareIAP is a comprehensive wrapper and packaging tool for the Flare I
 - 🔌 **Dependency Injection**: Built-in DI container for better code organization
 - 📱 **iOS 13.0+**: Compatible with iOS 13.0 and later versions
 - 🧪 **Well-tested**: Comprehensive test coverage for reliability
+- 🔄 **Flare 3.3.0**: Synced with latest Flare framework version 3.3.0
+- 📝 **Logging System**: Built-in comprehensive logging for debugging and monitoring
+- ⏰ **Expiration Query**: Subscription ticket expiration time query support
+- 🔓 **Public API**: Enhanced public API accessibility for better integration
 
 ## Requirements
 
@@ -62,9 +66,22 @@ Flare.checkCurrentSubscriptions { transactions in
     
     for transaction in transactions {
         print("Transaction ID: \(transaction.id)")
+        print("Expiration Date: \(transaction.expirationDate ?? "N/A")")
         // Handle transaction data
     }
 }
+```
+
+### Logging Configuration
+
+The library includes a comprehensive logging system for debugging:
+
+```swift
+import MMTToolForFlareIAP
+
+// Logging is automatically configured
+// Check console output for detailed IAP operation logs
+// Logs include: purchases, transactions, receipt validation, and more
 ```
 
 ## Example Project
@@ -82,13 +99,35 @@ Then open `MMTToolForFlareIAP.xcworkspace` in Xcode and run the example app.
 
 MMTToolForFlareIAP is built with a modular architecture:
 
-- **Core**: Core framework functionality
+- **Core**: Core framework functionality based on Flare 3.3.0
 - **Atomic**: Thread-safe operations using atomic values
 - **Concurrency**: Async/await support with task factories
 - **DI**: Dependency injection container for managing dependencies
 - **Extensions**: Convenient extensions for StoreKit integration
 - **Models**: Type-safe data models for transactions and subscriptions
 - **Providers**: Protocol-based providers for flexible implementations
+- **Logger**: Comprehensive logging system with formatters and printers
+
+## What's New
+
+### Version 0.1.5
+- Synced with Flare framework 3.3.0
+- Added comprehensive logging system for debugging and monitoring
+- Enhanced logger with multiple formatters and print strategies
+- Improved transaction tracking with detailed logs
+
+### Version 0.1.4
+- Enhanced public API accessibility
+- Updated internal properties to public for better integration
+
+### Version 0.1.3
+- Added subscription ticket expiration time query support
+- Enhanced transaction models with expiration date properties
+
+### Version 0.1.2-0.1.1
+- Initial stable releases
+- Core IAP functionality
+- StoreKit 2 support
 
 ## Contributing
 

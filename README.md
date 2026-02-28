@@ -22,7 +22,7 @@ MMTToolForFlareIAP is a comprehensive wrapper and packaging tool for the Flare I
 - 🧪 **Well-tested**: Comprehensive test coverage for reliability
 - 🔄 **Flare 3.3.0**: Synced with latest Flare framework version 3.3.0
 - 📝 **Logging System**: Built-in comprehensive logging for debugging and monitoring
-- ⏰ **Expiration Query**: Subscription ticket expiration time query support
+- ⏰ **Expiration Query (0.1.6)**: Subscription ticket expiration time query support
 - 🔓 **Public API**: Enhanced public API accessibility for better integration
 
 ## Requirements
@@ -110,6 +110,9 @@ MMTToolForFlareIAP is built with a modular architecture:
 
 ## What's New
 
+### Version 0.1.6
+- Added subscription ticket expiration time query support
+
 ### Version 0.1.5
 - Synced with Flare framework 3.3.0
 - Added comprehensive logging system for debugging and monitoring
@@ -121,7 +124,6 @@ MMTToolForFlareIAP is built with a modular architecture:
 - Updated internal properties to public for better integration
 
 ### Version 0.1.3
-- Added subscription ticket expiration time query support
 - Enhanced transaction models with expiration date properties
 
 ### Version 0.1.2-0.1.1

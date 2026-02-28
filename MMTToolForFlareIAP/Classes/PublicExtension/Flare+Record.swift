@@ -66,3 +66,4 @@ public extension Flare {
         resultBlock?(transactionList, false)
     }
 }
+

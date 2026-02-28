@@ -47,6 +47,10 @@ extension SK2StoreTransaction: IStoreTransaction {
         transaction.purchaseDate
     }
 
+    public var subscribeExpireDate: Date? {
+        transaction.expirationDate
+    }
+
     var hasKnownPurchaseDate: Bool {
         true
     }

@@ -61,6 +61,10 @@ extension StoreTransaction: IStoreTransaction {
         storeTransaction.purchaseDate
     }
 
+    public var subscribeExpireDate: Date? {
+        storeTransaction.subscribeExpireDate
+    }
+
     public var hasKnownPurchaseDate: Bool {
         storeTransaction.hasKnownPurchaseDate
     }

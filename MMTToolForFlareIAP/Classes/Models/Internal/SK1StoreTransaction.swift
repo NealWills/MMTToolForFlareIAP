@@ -42,6 +42,10 @@ extension SK1StoreTransaction: IStoreTransaction {
         return date
     }
 
+    var subscribeExpireDate: Date? {
+        return nil
+    }
+
     var hasKnownPurchaseDate: Bool {
         transaction.transactionDate != nil
     }

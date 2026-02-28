@@ -18,8 +18,10 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-MMTToolForFlareIAP 是 Flare IAP 库的上层封装和打包工具。提供了更简洁易用的 API 接口和完整的打包方案，
-便于在 MMT 项目中快速集成应用内购买功能。该库基于 Flare 框架构建，提供了开箱即用的 IAP 解决方案。
+MMTToolForFlareIAP is a comprehensive wrapper and packaging tool for the Flare IAP framework.
+It provides a simplified and unified API for implementing in-app purchases (IAP) in iOS applications.
+This library makes it easy to integrate subscription and transaction management into your projects with minimal boilerplate code.
+Built on top of the robust Flare framework, MMTToolForFlareIAP offers an out-of-the-box IAP solution.
                        DESC
 
   s.homepage         = 'https://github.com/NealWills/MMTToolForFlareIAP.git'

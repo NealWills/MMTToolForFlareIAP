@@ -38,7 +38,7 @@ final class PurchaseProvider: @unchecked Sendable {
         self.paymentProvider = paymentProvider
         self.configurationProvider = configurationProvider
 
-        if let transactionListener = transactionListener {
+        if let transactionListener {
             self.transactionListener = transactionListener
         } else if #available(iOS 15.0, tvOS 15.0, watchOS 8.0, macOS 12.0, *) {
             self.configureTransactionListener()
@@ -55,15 +55,17 @@ final class PurchaseProvider: @unchecked Sendable {
         completion: @escaping @MainActor (Result<StoreTransaction, IAPError>) -> Void
     ) {
         let payment = SKMutablePayment(product: sk1StoreProduct.product)
-        payment.applicationUsername = configurationProvider.applicationUsername ?? ""
+        payment.applicationUsername = configurationProvider.applicationUsername
         payment.paymentDiscount = promotionalOffer?.signedData.skPromotionalOffer
         paymentProvider.add(payment: payment) { _, result in
             Task {
                 switch result {
                 case let .success(transaction):
                     await completion(.success(StoreTransaction(paymentTransaction: PaymentTransaction(transaction))))
+                    Logger.info(message: L10n.Purchase.purchasedProduct(sk1StoreProduct.productIdentifier))
                 case let .failure(error):
                     await completion(.failure(error))
+                    self.log(error: error, productID: sk1StoreProduct.productIdentifier)
                 }
             }
         }
@@ -83,8 +85,10 @@ final class PurchaseProvider: @unchecked Sendable {
                     do {
                         if let transaction = try await self.transactionListener?.handle(purchaseResult: result) {
                             await completion(.success(transaction))
+                            Logger.info(message: L10n.Purchase.purchasedProduct(sk2StoreProduct.productIdentifier))
                         } else {
                             await completion(.failure(IAPError.unknown))
+                            self.log(error: IAPError.unknown, productID: sk2StoreProduct.productIdentifier)
                         }
                     } catch {
                         if let error = error as? IAPError {
@@ -124,6 +128,20 @@ final class PurchaseProvider: @unchecked Sendable {
             await self.transactionListener?.listenForTransaction()
         }
     }
+
+    private func log(error: Error, productID: String) {
+        Logger.error(message: L10n.Purchase.productPurchaseFailed(productID, error.localizedDescription))
+    }
+
+    private func logPurchase(productID: String, promotionalOffer: PromotionalOffer?) {
+        if let offerID = promotionalOffer?.discount.offerIdentifier {
+            Logger.info(
+                message: L10n.Purchase.purchasingProductWithOffer(productID, offerID)
+            )
+        } else {
+            Logger.info(message: L10n.Purchase.purchasingProduct(productID))
+        }
+    }
 }
 
 // MARK: IPurchaseProvider
@@ -134,6 +152,7 @@ extension PurchaseProvider: IPurchaseProvider {
         promotionalOffer: PromotionalOffer?,
         completion: @escaping PurchaseCompletionHandler
     ) {
+        logPurchase(productID: product.productIdentifier, promotionalOffer: promotionalOffer)
 
         if #available(iOS 15.0, tvOS 15.0, watchOS 8.0, macOS 12.0, *),
            let sk2Product = product.underlyingProduct as? SK2StoreProduct
@@ -151,6 +170,7 @@ extension PurchaseProvider: IPurchaseProvider {
         promotionalOffer: PromotionalOffer?,
         completion: @escaping PurchaseCompletionHandler
     ) {
+        logPurchase(productID: product.productIdentifier, promotionalOffer: promotionalOffer)
 
         if let sk2Product = product.underlyingProduct as? SK2StoreProduct {
             purchase(
@@ -161,7 +181,8 @@ extension PurchaseProvider: IPurchaseProvider {
             )
         } else {
             Task {
-                await completion(.failure(.unknown))
+                completion(.failure(.unknown))
+                self.log(error: IAPError.unknown, productID: product.productIdentifier)
             }
         }
     }
@@ -177,6 +198,12 @@ extension PurchaseProvider: IPurchaseProvider {
                 asyncMethod: {
                     await sk2Transaction.transaction.finish()
 
+                    Logger.info(
+                        message: L10n.Purchase.finishingTransaction(
+                            sk2Transaction.transactionIdentifier,
+                            sk2Transaction.productIdentifier
+                        )
+                    )
                 }
             )
         } else if let sk1Transaction = transaction.storeTransaction as? SK1StoreTransaction {
@@ -217,7 +244,7 @@ extension PurchaseProvider: IPurchaseProvider {
 
     func restore(_ completion: @escaping @Sendable (Result<Void, Error>) -> Void) {
         paymentProvider.restoreCompletedTransactions { _, error in
-            if let error = error {
+            if let error {
                 completion(.failure(error))
             } else {
                 completion(.success(()))

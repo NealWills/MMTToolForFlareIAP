@@ -13,8 +13,6 @@ protocol IStoreTransaction: Sendable {
     var productIdentifier: String { get }
     /// The date when the transaction occurred.
     var purchaseDate: Date { get }
-    /// The date when the transaction expires, if applicable.
-    var expirationDate: Date? { get }
     /// A boolean indicating whether the purchase date is known.
     var hasKnownPurchaseDate: Bool { get }
     /// A unique identifier for the transaction.
@@ -37,6 +35,11 @@ protocol IStoreTransaction: Sendable {
     ///
     /// - Note: This is only available for StoreKit 2 transactions.
     var environment: StoreEnvironment? { get }
+
+    /// The original transaction identifier of a purchase.
+    ///
+    /// - Note: This is only available for StoreKit 2 transactions.
+    var originalID: UInt64? { get }
 }
 
 /// Default implementation of the currency property for backward compatibility.

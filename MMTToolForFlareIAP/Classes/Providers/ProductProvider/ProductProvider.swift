@@ -3,6 +3,8 @@
 // Copyright © 2023 Space Code. All rights reserved.
 //
 
+import Atomic
+import Concurrency
 import StoreKit
 
 // MARK: - ProductProvider
@@ -83,8 +85,8 @@ final class ProductProvider: NSObject, IProductProvider {
         }
     }
 
-    private func handleFetchResult<T: ISKProduct, E: Error>(
-        result: Result<[T], E>,
+    private func handleFetchResult(
+        result: Result<[some ISKProduct], some Error>,
         _ completion: @escaping (Result<[StoreProduct], IAPError>) -> Void
     ) {
         switch result {
@@ -120,9 +122,12 @@ extension ProductProvider: SKProductsRequestDelegate {
             guard response.invalidProductIdentifiers.isEmpty else {
                 self.dispatchQueueFactory.main().async {
                     handler?(.failure(.invalid(productIDs: response.invalidProductIdentifiers)))
+                    Logger.error(message: L10n.Products.requestedProductsNotFound(response.invalidProductIdentifiers))
                 }
                 return
             }
+
+            Logger.debug(message: L10n.Products.requestedProductsReceived(response.products.map(\.productIdentifier)))
 
             self.dispatchQueueFactory.main().async {
                 handler?(.success(response.products.map { StoreProduct(skProduct: $0) }))
@@ -131,10 +136,10 @@ extension ProductProvider: SKProductsRequestDelegate {
     }
 }
 
-// MARK: Sendable
+// MARK: @unchecked Sendable
 
-// @unchecked because:
-// - It has mutable state, but it's made thread-safe through `queue`.
+/// @unchecked because:
+/// - It has mutable state, but it's made thread-safe through `queue`.
 extension ProductProvider: @unchecked Sendable {}
 
 // MARK: - Helpers

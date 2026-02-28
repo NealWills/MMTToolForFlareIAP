@@ -1,6 +1,6 @@
 //
 // Flare
-// Copyright © 2024 Space Code. All rights reserved.
+// Copyright © 2023 Space Code. All rights reserved.
 //
 
 import Foundation
@@ -21,9 +21,9 @@ extension RefundError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .duplicateRequest:
-            return L10n.RefundError.DuplicateRequest.description
+            L10n.RefundError.DuplicateRequest.description
         case .failed:
-            return L10n.RefundError.Failed.description
+            L10n.RefundError.Failed.description
         }
     }
 }

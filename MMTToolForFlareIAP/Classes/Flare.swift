@@ -3,6 +3,7 @@
 // Copyright © 2023 Space Code. All rights reserved.
 //
 
+import struct Log.LogLevel
 import StoreKit
 
 #if os(iOS) || VISION_OS
@@ -21,7 +22,7 @@ public final class Flare {
     /// The configuration provider.
     private let configurationProvider: IConfigurationProvider
 
-    /// The singleton instance.
+    // The singleton instance.
     #if swift(>=6.0)
         private nonisolated(unsafe) static let flare: Flare = .init()
     #else
@@ -29,8 +30,15 @@ public final class Flare {
     #endif
 
     /// Returns a shared `Flare` object.
-    public static var shared: IFlare { flare }
+    public static var shared: IFlare {
+        flare
+    }
 
+    /// The log level.
+    public var logLevel: LogLevel {
+        get { Logger.logLevel }
+        set { Logger.logLevel = newValue }
+    }
 
     // MARK: Initialization
 
@@ -197,6 +205,7 @@ extension Flare: IFlare {
 
     private func checkIfUserCanMakePayments() -> Bool {
         guard iapProvider.canMakePayments else {
+            Logger.error(message: L10n.Purchase.cannotPurcaseProduct)
             return false
         }
         return true

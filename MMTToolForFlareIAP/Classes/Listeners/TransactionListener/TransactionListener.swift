@@ -47,6 +47,12 @@ actor TransactionListener {
 
             return transaction
         case let .unverified(transaction, verificationError):
+            Logger.info(
+                message: L10n.Purchase.transactionUnverified(
+                    transaction.productID,
+                    verificationError.localizedDescription
+                )
+            )
 
             let error = IAPError.verification(
                 error: .init(verificationError)
@@ -72,13 +78,14 @@ extension TransactionListener: ITransactionListener {
     func listenForTransaction() async {
         task?.cancel()
         task = Task(priority: .utility) { [weak self] in
-            guard let self = self else { return }
+            guard let self else { return }
 
             for await update in self.updates {
                 Task.detached {
                     do {
                         _ = try await self.handle(transactionResult: update, fromTransactionUpdate: true)
                     } catch {
+                        Logger.error(message: L10n.Purchase.errorUpdatingTransaction(error.localizedDescription))
                     }
                 }
             }

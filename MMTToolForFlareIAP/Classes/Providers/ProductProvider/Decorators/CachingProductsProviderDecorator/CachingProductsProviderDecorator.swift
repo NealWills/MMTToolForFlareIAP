@@ -3,6 +3,7 @@
 // Copyright © 2024 Space Code. All rights reserved.
 //
 
+import Atomic
 import Foundation
 
 // MARK: - CachingProductsProviderDecorator
@@ -46,8 +47,7 @@ final class CachingProductsProviderDecorator {
     ///
     /// - Returns: A dictionary containing cached products for the specified IDs.
     private func cachedProducts(ids: some Collection<String>) -> [String: StoreProduct] {
-        let cachedProducts = _cache.wrappedValue.filter { ids.contains($0.key) }
-        return cachedProducts
+        _cache.wrappedValue.filter { ids.contains($0.key) }
     }
 
     /// Checks the cache for specified product IDs and fetches missing products from the product provider.
@@ -139,7 +139,7 @@ extension CachingProductsProviderDecorator: ICachingProductsProviderDecorator {
     @available(iOS 15.0, tvOS 15.0, watchOS 8.0, macOS 12.0, *)
     func fetch(productIDs: some Collection<String>) async throws -> [StoreProduct] {
         try await withCheckedThrowingContinuation { [weak self] continuation in
-            guard let self = self else {
+            guard let self else {
                 continuation.resume(throwing: IAPError.unknown)
                 return
             }
@@ -158,6 +158,6 @@ extension CachingProductsProviderDecorator: ICachingProductsProviderDecorator {
     }
 }
 
-// MARK: Sendable
+// MARK: @unchecked Sendable
 
 extension CachingProductsProviderDecorator: @unchecked Sendable {}

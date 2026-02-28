@@ -3,6 +3,7 @@
 // Copyright © 2023 Space Code. All rights reserved.
 //
 
+import Concurrency
 import StoreKit
 
 // MARK: - PaymentProvider
@@ -66,6 +67,12 @@ extension PaymentProvider: IPaymentProvider {
         dispatchQueueFactory.main().async {
             self.paymentQueue.add(payment)
 
+            Logger.info(
+                message: L10n.Payment.paymentQueueAddingPayment(
+                    payment.productIdentifier,
+                    self.paymentQueue.transactions.count
+                )
+            )
         }
     }
 
@@ -115,7 +122,7 @@ extension PaymentProvider: SKPaymentTransactionObserver {
                 continue
             }
             privateQueue.async { [weak self] in
-                guard let self = self else { return }
+                guard let self else { return }
 
                 if let handlers = self.paymentHandlers.removeValue(
                     forKey: transaction.payment.productIdentifier
@@ -160,6 +167,12 @@ extension PaymentProvider: SKPaymentTransactionObserver {
     #endif
 
     func finish(transaction: PaymentTransaction) {
+        Logger.info(
+            message: L10n.Purchase.finishingTransaction(
+                transaction.transactionIdentifier ?? "",
+                transaction.productIdentifier
+            )
+        )
 
         paymentQueue.finishTransaction(transaction.skTransaction)
     }
@@ -169,6 +182,6 @@ extension PaymentProvider: SKPaymentTransactionObserver {
     }
 }
 
-// MARK: Sendable
+// MARK: @unchecked Sendable
 
 extension PaymentProvider: @unchecked Sendable {}

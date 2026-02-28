@@ -49,6 +49,9 @@ extension StoreTransaction {
 // MARK: IStoreTransaction
 
 extension StoreTransaction: IStoreTransaction {
+    public var originalID: UInt64? {
+        storeTransaction.originalID
+    }
 
     public var productIdentifier: String {
         storeTransaction.productIdentifier
@@ -56,10 +59,6 @@ extension StoreTransaction: IStoreTransaction {
 
     public var purchaseDate: Date {
         storeTransaction.purchaseDate
-    }
-
-    public var expirationDate: Date? {
-        storeTransaction.expirationDate
     }
 
     public var hasKnownPurchaseDate: Bool {
@@ -82,15 +81,15 @@ extension StoreTransaction: IStoreTransaction {
         storeTransaction.jwsRepresentation
     }
 
-    public var environment: StoreEnvironment? {
+    var environment: StoreEnvironment? {
         storeTransaction.environment
     }
 
-    public var price: Decimal? {
+    var price: Decimal? {
         storeTransaction.price
     }
 
-    public var currency: String? {
+    var currency: String? {
         storeTransaction.currency
     }
 }

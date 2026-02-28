@@ -55,17 +55,17 @@ final class PurchaseProvider: @unchecked Sendable {
         completion: @escaping @MainActor (Result<StoreTransaction, IAPError>) -> Void
     ) {
         let payment = SKMutablePayment(product: sk1StoreProduct.product)
-        payment.applicationUsername = configurationProvider.applicationUsername
+        payment.applicationUsername = configurationProvider.applicationUsername ?? ""
         payment.paymentDiscount = promotionalOffer?.signedData.skPromotionalOffer
         paymentProvider.add(payment: payment) { _, result in
             Task {
                 switch result {
-                case let .success(transaction):
-                    await completion(.success(StoreTransaction(paymentTransaction: PaymentTransaction(transaction))))
-                    Logger.info(message: L10n.Purchase.purchasedProduct(sk1StoreProduct.productIdentifier))
-                case let .failure(error):
-                    await completion(.failure(error))
-                    self.log(error: error, productID: sk1StoreProduct.productIdentifier)
+                    case let .success(transaction):
+                        await completion(.success(StoreTransaction(paymentTransaction: PaymentTransaction(transaction))))
+                        FlareLogger.info(message: L10n.Purchase.purchasedProduct(sk1StoreProduct.productIdentifier))
+                    case let .failure(error):
+                        await completion(.failure(error))
+                        self.log(error: error, productID: sk1StoreProduct.productIdentifier)
                 }
             }
         }
@@ -81,24 +81,24 @@ final class PurchaseProvider: @unchecked Sendable {
         AsyncHandler.call(completion: { (result: Result<Product.PurchaseResult, Error>) in
             Task {
                 switch result {
-                case let .success(result):
-                    do {
-                        if let transaction = try await self.transactionListener?.handle(purchaseResult: result) {
-                            await completion(.success(transaction))
-                            Logger.info(message: L10n.Purchase.purchasedProduct(sk2StoreProduct.productIdentifier))
-                        } else {
-                            await completion(.failure(IAPError.unknown))
-                            self.log(error: IAPError.unknown, productID: sk2StoreProduct.productIdentifier)
+                    case let .success(result):
+                        do {
+                            if let transaction = try await self.transactionListener?.handle(purchaseResult: result) {
+                                await completion(.success(transaction))
+                                FlareLogger.info(message: L10n.Purchase.purchasedProduct(sk2StoreProduct.productIdentifier))
+                            } else {
+                                await completion(.failure(IAPError.unknown))
+                                self.log(error: IAPError.unknown, productID: sk2StoreProduct.productIdentifier)
+                            }
+                        } catch {
+                            if let error = error as? IAPError {
+                                await completion(.failure(error))
+                            } else {
+                                await completion(.failure(.with(error: error)))
+                            }
                         }
-                    } catch {
-                        if let error = error as? IAPError {
-                            await completion(.failure(error))
-                        } else {
-                            await completion(.failure(.with(error: error)))
-                        }
-                    }
-                case let .failure(error):
-                    await completion(.failure(IAPError(error: error)))
+                    case let .failure(error):
+                        await completion(.failure(IAPError(error: error)))
                 }
             }
         }, asyncMethod: {
@@ -130,16 +130,16 @@ final class PurchaseProvider: @unchecked Sendable {
     }
 
     private func log(error: Error, productID: String) {
-        Logger.error(message: L10n.Purchase.productPurchaseFailed(productID, error.localizedDescription))
+        FlareLogger.error(message: L10n.Purchase.productPurchaseFailed(productID, error.localizedDescription))
     }
 
     private func logPurchase(productID: String, promotionalOffer: PromotionalOffer?) {
         if let offerID = promotionalOffer?.discount.offerIdentifier {
-            Logger.info(
+            FlareLogger.info(
                 message: L10n.Purchase.purchasingProductWithOffer(productID, offerID)
             )
         } else {
-            Logger.info(message: L10n.Purchase.purchasingProduct(productID))
+            FlareLogger.info(message: L10n.Purchase.purchasingProduct(productID))
         }
     }
 }
@@ -198,7 +198,7 @@ extension PurchaseProvider: IPurchaseProvider {
                 asyncMethod: {
                     await sk2Transaction.transaction.finish()
 
-                    Logger.info(
+                    FlareLogger.info(
                         message: L10n.Purchase.finishingTransaction(
                             sk2Transaction.transactionIdentifier,
                             sk2Transaction.productIdentifier
@@ -217,10 +217,10 @@ extension PurchaseProvider: IPurchaseProvider {
 
         paymentProvider.set { _, result in
             switch result {
-            case let .success(transaction):
-                fallbackHandler?(.success(StoreTransaction(paymentTransaction: PaymentTransaction(transaction))))
-            case let .failure(error):
-                fallbackHandler?(.failure(error))
+                case let .success(transaction):
+                    fallbackHandler?(.success(StoreTransaction(paymentTransaction: PaymentTransaction(transaction))))
+                case let .failure(error):
+                    fallbackHandler?(.failure(error))
             }
         }
         paymentProvider.addTransactionObserver()
@@ -258,10 +258,10 @@ extension PurchaseProvider: IPurchaseProvider {
 extension PurchaseProvider: TransactionListenerDelegate {
     func transactionListener(_: ITransactionListener, transactionDidUpdate result: Result<StoreTransaction, IAPError>) {
         switch result {
-        case let .success(transaction):
-            self.fallbackHandler?(.success(transaction))
-        case let .failure(error):
-            self.fallbackHandler?(.failure(error))
+            case let .success(transaction):
+                self.fallbackHandler?(.success(transaction))
+            case let .failure(error):
+                self.fallbackHandler?(.failure(error))
         }
     }
 }

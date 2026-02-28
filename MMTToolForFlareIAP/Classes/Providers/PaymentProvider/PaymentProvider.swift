@@ -3,7 +3,6 @@
 // Copyright © 2023 Space Code. All rights reserved.
 //
 
-import Concurrency
 import StoreKit
 
 // MARK: - PaymentProvider
@@ -67,7 +66,7 @@ extension PaymentProvider: IPaymentProvider {
         dispatchQueueFactory.main().async {
             self.paymentQueue.add(payment)
 
-            Logger.info(
+            FlareLogger.info(
                 message: L10n.Payment.paymentQueueAddingPayment(
                     payment.productIdentifier,
                     self.paymentQueue.transactions.count
@@ -167,7 +166,7 @@ extension PaymentProvider: SKPaymentTransactionObserver {
     #endif
 
     func finish(transaction: PaymentTransaction) {
-        Logger.info(
+        FlareLogger.info(
             message: L10n.Purchase.finishingTransaction(
                 transaction.transactionIdentifier ?? "",
                 transaction.productIdentifier

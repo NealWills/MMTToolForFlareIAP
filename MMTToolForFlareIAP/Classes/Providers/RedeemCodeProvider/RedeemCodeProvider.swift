@@ -38,10 +38,10 @@ extension RedeemCodeProvider: IRedeemCodeProvider {
         func presentOfferCodeRedeemSheet() async throws {
             let windowScene = try await systemInfoProvider.currentScene
             do {
-                Logger.debug(message: L10n.Redeem.presentingOfferCodeRedeemSheet)
+                FlareLogger.debug(message: L10n.Redeem.presentingOfferCodeRedeemSheet)
                 try await AppStore.presentOfferCodeRedeemSheet(in: windowScene)
             } catch {
-                Logger.error(message: L10n.Redeem.unableToPresentOfferCodeRedeemSheet(error.localizedDescription))
+                FlareLogger.error(message: L10n.Redeem.unableToPresentOfferCodeRedeemSheet(error.localizedDescription))
                 throw error
             }
         }

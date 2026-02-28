@@ -3,7 +3,6 @@
 // Copyright © 2023 Space Code. All rights reserved.
 //
 
-import struct Log.LogLevel
 import StoreKit
 
 #if os(iOS) || VISION_OS
@@ -36,8 +35,8 @@ public final class Flare {
 
     /// The log level.
     public var logLevel: LogLevel {
-        get { Logger.logLevel }
-        set { Logger.logLevel = newValue }
+        get { FlareLogger.logLevel }
+        set { FlareLogger.logLevel = newValue }
     }
 
     // MARK: Initialization
@@ -205,7 +204,7 @@ extension Flare: IFlare {
 
     private func checkIfUserCanMakePayments() -> Bool {
         guard iapProvider.canMakePayments else {
-            Logger.error(message: L10n.Purchase.cannotPurcaseProduct)
+            FlareLogger.error(message: L10n.Purchase.cannotPurcaseProduct)
             return false
         }
         return true

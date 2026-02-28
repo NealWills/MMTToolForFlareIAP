@@ -35,34 +35,34 @@ actor TransactionListener {
         fromTransactionUpdate: Bool
     ) async throws -> StoreTransaction {
         switch transactionResult {
-        case let .verified(transaction):
-            let transaction = StoreTransaction(
-                transaction: transaction,
-                jwtRepresentation: transactionResult.jwsRepresentation
-            )
-
-            if fromTransactionUpdate {
-                delegate?.transactionListener(self, transactionDidUpdate: .success(transaction))
-            }
-
-            return transaction
-        case let .unverified(transaction, verificationError):
-            Logger.info(
-                message: L10n.Purchase.transactionUnverified(
-                    transaction.productID,
-                    verificationError.localizedDescription
+            case let .verified(transaction):
+                let transaction = StoreTransaction(
+                    transaction: transaction,
+                    jwtRepresentation: transactionResult.jwsRepresentation
                 )
-            )
 
-            let error = IAPError.verification(
-                error: .init(verificationError)
-            )
+                if fromTransactionUpdate {
+                    delegate?.transactionListener(self, transactionDidUpdate: .success(transaction))
+                }
 
-            if fromTransactionUpdate {
-                delegate?.transactionListener(self, transactionDidUpdate: .failure(error))
-            }
+                return transaction
+            case let .unverified(transaction, verificationError):
+                FlareLogger.info(
+                    message: L10n.Purchase.transactionUnverified(
+                        transaction.productID,
+                        verificationError.localizedDescription
+                    )
+                )
 
-            throw error
+                let error = IAPError.verification(
+                    error: .init(verificationError)
+                )
+
+                if fromTransactionUpdate {
+                    delegate?.transactionListener(self, transactionDidUpdate: .failure(error))
+                }
+
+                throw error
         }
     }
 }
@@ -85,7 +85,7 @@ extension TransactionListener: ITransactionListener {
                     do {
                         _ = try await self.handle(transactionResult: update, fromTransactionUpdate: true)
                     } catch {
-                        Logger.error(message: L10n.Purchase.errorUpdatingTransaction(error.localizedDescription))
+                        FlareLogger.error(message: L10n.Purchase.errorUpdatingTransaction(error.localizedDescription))
                     }
                 }
             }
@@ -94,14 +94,14 @@ extension TransactionListener: ITransactionListener {
 
     func handle(purchaseResult: Product.PurchaseResult) async throws -> StoreTransaction? {
         switch purchaseResult {
-        case let .success(verificationResult):
-            return try await handle(transactionResult: verificationResult, fromTransactionUpdate: false)
-        case .userCancelled:
-            throw IAPError.paymentCancelled
-        case .pending:
-            throw IAPError.paymentDefferred
-        @unknown default:
-            throw IAPError.unknown
+            case let .success(verificationResult):
+                return try await handle(transactionResult: verificationResult, fromTransactionUpdate: false)
+            case .userCancelled:
+                throw IAPError.paymentCancelled
+            case .pending:
+                throw IAPError.paymentDefferred
+            @unknown default:
+                throw IAPError.unknown
         }
     }
 }

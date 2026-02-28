@@ -4,11 +4,10 @@
 //
 
 import Foundation
-import Log
 
 // MARK: - Logger
 
-enum Logger {
+enum FlareLogger {
     // MARK: Properties
 
     private static var defaultLogLevel: LogLevel {
@@ -28,7 +27,7 @@ enum Logger {
             logLevel: Self.defaultLogLevel
         )
     #else
-        private static let `default`: Log.Logger = .init(
+        private static let `default`: Logger = .init(
             printers: [
                 ConsolePrinter(formatters: Self.formatters),
                 OSPrinter(subsystem: .subsystem, category: .category, formatters: Self.formatters),

@@ -38,7 +38,7 @@ extension ConfigurationProvider: IConfigurationProvider {
     func configure(with configuration: Configuration) {
         cacheProvider.write(key: .applicationUsername, value: configuration.applicationUsername)
         fetchCachePolicy = configuration.fetchCachePolicy
-        Logger.debug(message: L10n.Flare.initWithConfiguration(configuration))
+        FlareLogger.debug(message: L10n.Flare.initWithConfiguration(configuration))
     }
 }
 

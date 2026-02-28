@@ -3,7 +3,6 @@
 // Copyright © 2023 Space Code. All rights reserved.
 //
 
-import Concurrency
 import Foundation
 import StoreKit
 
@@ -93,7 +92,7 @@ final class ReceiptRefreshProvider: NSObject, @unchecked Sendable {
 
 extension ReceiptRefreshProvider: IReceiptRefreshProvider {
     func refresh(requestID: String, handler: @escaping ReceiptRefreshHandler) {
-        Logger.info(message: L10n.Receipt.refreshingReceipt(requestID))
+        FlareLogger.info(message: L10n.Receipt.refreshingReceipt(requestID))
 
         let request = makeRequest(id: requestID)
         fetch(request: request, handler: handler)
@@ -112,7 +111,7 @@ extension ReceiptRefreshProvider: IReceiptRefreshProvider {
 
 extension ReceiptRefreshProvider: SKRequestDelegate {
     func request(_ request: SKRequest, didFailWithError error: Error) {
-        Logger.error(message: L10n.Receipt.refreshingReceiptFailed(request.id, error.localizedDescription))
+        FlareLogger.error(message: L10n.Receipt.refreshingReceiptFailed(request.id, error.localizedDescription))
 
         dispatchQueue.async {
             let handler = self.handlers.removeValue(forKey: request.id)
@@ -123,7 +122,7 @@ extension ReceiptRefreshProvider: SKRequestDelegate {
     }
 
     func requestDidFinish(_ request: SKRequest) {
-        Logger.info(message: L10n.Receipt.refreshedReceipt(request.id))
+        FlareLogger.info(message: L10n.Receipt.refreshedReceipt(request.id))
 
         dispatchQueue.async {
             let handler = self.handlers.removeValue(forKey: request.id)

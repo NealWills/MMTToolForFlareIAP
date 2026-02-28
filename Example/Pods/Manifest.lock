@@ -1,5 +1,5 @@
 PODS:
-  - MMTToolForFlareIAP (0.1.0)
+  - MMTToolForFlareIAP (0.1.1)
 
 DEPENDENCIES:
   - MMTToolForFlareIAP (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MMTToolForFlareIAP: 2db07203bf7b39b5302403114df1aeb4c3fca658
+  MMTToolForFlareIAP: a4306a8836fc2d45d1768e2bae92f8779d4e79fa
 
 PODFILE CHECKSUM: 86a97fd27c6b438e0f3a67431e36ffaff77c8148
 

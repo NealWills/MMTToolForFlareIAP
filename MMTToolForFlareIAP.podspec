@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MMTToolForFlareIAP'
-  s.version          = '0.1.0'
-  s.summary          = 'IAP Tool for MMT'
+  s.version          = '0.1.1'
+  s.summary          = 'A convenient wrapper and packaging tool for Flare IAP'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-IAP Tool for MMT, easy to use.
+MMTToolForFlareIAP 是 Flare IAP 库的上层封装和打包工具。提供了更简洁易用的 API 接口和完整的打包方案，
+便于在 MMT 项目中快速集成应用内购买功能。该库基于 Flare 框架构建，提供了开箱即用的 IAP 解决方案。
                        DESC
 
   s.homepage         = 'https://github.com/Donghn/MMTToolForFlareIAP'

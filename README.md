@@ -121,6 +121,9 @@ MMTToolForFlareIAP is built with a modular architecture:
 
 ## What's New
 
+### Version 0.1.8
+- Added appAccountToken retrieval on StoreTransaction
+
 ### Version 0.1.7
 - Added product type retrieval support
 - Enhanced StoreProduct models with product type information

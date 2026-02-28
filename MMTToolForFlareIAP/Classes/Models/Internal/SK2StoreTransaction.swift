@@ -111,4 +111,8 @@ extension SK2StoreTransaction: IStoreTransaction {
             nil
         #endif
     }
+
+    var appAccountToken: String? {
+        transaction.appAccountToken?.uuidString
+    }
 }

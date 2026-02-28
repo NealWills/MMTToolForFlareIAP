@@ -44,6 +44,8 @@ protocol IStoreTransaction: Sendable {
     ///
     /// - Note: This is only available for StoreKit 2 transactions.
     var originalID: UInt64? { get }
+
+    var appAccountToken: String? { get }
 }
 
 /// Default implementation of the currency property for backward compatibility.

@@ -84,4 +84,8 @@ extension SK1StoreTransaction: IStoreTransaction {
     var currency: String? {
         nil
     }
+
+    var appAccountToken: String? {
+        return nil
+    }
 }

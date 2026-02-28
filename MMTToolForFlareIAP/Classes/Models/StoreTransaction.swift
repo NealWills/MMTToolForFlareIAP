@@ -100,6 +100,10 @@ extension StoreTransaction: IStoreTransaction {
     public var currency: String? {
         storeTransaction.currency
     }
+
+    public var appAccountToken: String? {
+        storeTransaction.appAccountToken
+    }
 }
 
 // MARK: Equatable

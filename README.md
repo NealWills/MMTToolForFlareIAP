@@ -22,7 +22,9 @@ MMTToolForFlareIAP is a comprehensive wrapper and packaging tool for the Flare I
 - 🧪 **Well-tested**: Comprehensive test coverage for reliability
 - 🔄 **Flare 3.3.0**: Synced with latest Flare framework version 3.3.0
 - 📝 **Logging System**: Built-in comprehensive logging for debugging and monitoring
+- 🎚️ **Log Level**: Public log level control via `Flare.shared.logLevel`
 - ⏰ **Expiration Query (0.1.6)**: Subscription ticket expiration time query support
+- 🧪 **Sandbox Detection**: Indicates receipt environment when checking subscriptions
 - 🔓 **Public API**: Enhanced public API accessibility for better integration
 
 ## Requirements
@@ -53,16 +55,21 @@ import MMTToolForFlareIAP
 
 // Configure in your AppDelegate or SceneDelegate
 Flare.configure(with: configuration)
+
+// Access the shared instance when needed
+let flare = Flare.shared
 ```
 
 ### Check Current Subscriptions
 
 ```swift
-Flare.checkCurrentSubscriptions { transactions in
+Flare.checkCurrentSubscriptions { transactions, isSandbox in
     guard let transactions = transactions else {
         print("Failed to fetch subscriptions")
         return
     }
+
+    print("Sandbox environment: \(isSandbox)")
     
     for transaction in transactions {
         print("Transaction ID: \(transaction.id)")
@@ -80,6 +87,9 @@ The library includes a comprehensive logging system for debugging:
 import MMTToolForFlareIAP
 
 // Logging is automatically configured
+// Adjust log level globally when needed
+Flare.shared.logLevel = .debug
+
 // Check console output for detailed IAP operation logs
 // Logs include: purchases, transactions, receipt validation, and more
 ```

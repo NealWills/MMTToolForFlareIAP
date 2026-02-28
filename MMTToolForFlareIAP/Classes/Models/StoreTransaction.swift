@@ -58,7 +58,7 @@ extension StoreTransaction: IStoreTransaction {
         storeTransaction.purchaseDate
     }
 
-    var expirationDate: Date? {
+    public var expirationDate: Date? {
         storeTransaction.expirationDate
     }
 
@@ -82,15 +82,15 @@ extension StoreTransaction: IStoreTransaction {
         storeTransaction.jwsRepresentation
     }
 
-    var environment: StoreEnvironment? {
+    public var environment: StoreEnvironment? {
         storeTransaction.environment
     }
 
-    var price: Decimal? {
+    public var price: Decimal? {
         storeTransaction.price
     }
 
-    var currency: String? {
+    public var currency: String? {
         storeTransaction.currency
     }
 }

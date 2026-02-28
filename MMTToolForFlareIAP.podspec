@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MMTToolForFlareIAP'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'A convenient wrapper and packaging tool for Flare IAP'
 
 # This description is used to generate tags and improve search results.
@@ -28,6 +28,7 @@ Features:
 - Transaction verification and handling
 - Receipt validation and processing
 - Subscription expiration time query support
+- Enhanced public API accessibility (internal to public properties)
                        DESC
 
   s.homepage         = 'https://github.com/NealWills/MMTToolForFlareIAP.git'

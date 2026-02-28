@@ -8,6 +8,7 @@ import StoreKit
 
 // MARK: - StoreEnvironment
 
+public
 enum StoreEnvironment {
     case production
     case sandbox

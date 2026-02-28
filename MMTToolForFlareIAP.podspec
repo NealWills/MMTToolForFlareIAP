@@ -22,10 +22,10 @@ MMTToolForFlareIAP 是 Flare IAP 库的上层封装和打包工具。提供了�
 便于在 MMT 项目中快速集成应用内购买功能。该库基于 Flare 框架构建，提供了开箱即用的 IAP 解决方案。
                        DESC
 
-  s.homepage         = 'https://github.com/Donghn/MMTToolForFlareIAP'
+  s.homepage         = 'https://github.com/NealWills/MMTToolForFlareIAP.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Donghn' => 'Donghn@maxeye.com' }
+  s.author           = { 'Neal Wills' => 'aoiiiiyuki@outlook.com' }
   s.source           = { :git => 'https://github.com/NealWills/MMTToolForFlareIAP.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

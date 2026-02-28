@@ -62,8 +62,6 @@ public extension Flare {
     /// - Parameter resultBlock: Callback block that receives the transactions list or nil.
     fileprivate class func checkCurrentSubscriptions15Down(_ resultBlock: ((_ storeTransactionList: [StoreTransaction]?, _ isSandbox: Bool) -> Void)?) {
         // StoreKit 2 is unavailable on iOS < 15.0, return nil
-        var transactionList: [StoreTransaction]?
-        resultBlock?(transactionList, false)
+        resultBlock?(nil, false)
     }
 }
-

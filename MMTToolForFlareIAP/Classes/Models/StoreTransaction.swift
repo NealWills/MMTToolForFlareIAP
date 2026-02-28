@@ -57,6 +57,10 @@ extension StoreTransaction: IStoreTransaction {
         storeTransaction.productIdentifier
     }
 
+    public var productType: String {
+        storeTransaction.productType
+    }
+
     public var purchaseDate: Date {
         storeTransaction.purchaseDate
     }

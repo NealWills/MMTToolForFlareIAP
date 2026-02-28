@@ -25,6 +25,7 @@ MMTToolForFlareIAP is a comprehensive wrapper and packaging tool for the Flare I
 - 🎚️ **Log Level**: Public log level control via `Flare.shared.logLevel`
 - ⏰ **Expiration Query (0.1.6)**: Subscription ticket expiration time query support
 - 🧪 **Sandbox Detection**: Indicates receipt environment when checking subscriptions
+- 🏷️ **Product Type (0.1.7)**: Product type retrieval support
 - 🔓 **Public API**: Enhanced public API accessibility for better integration
 
 ## Requirements
@@ -119,6 +120,10 @@ MMTToolForFlareIAP is built with a modular architecture:
 - **Logger**: Comprehensive logging system with formatters and printers
 
 ## What's New
+
+### Version 0.1.7
+- Added product type retrieval support
+- Enhanced StoreProduct models with product type information
 
 ### Version 0.1.6
 - Added subscription ticket expiration time query support

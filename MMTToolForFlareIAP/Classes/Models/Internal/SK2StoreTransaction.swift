@@ -35,6 +35,7 @@ struct SK2StoreTransaction {
 
 @available(iOS 15.0, tvOS 15.0, watchOS 8.0, macOS 12.0, *)
 extension SK2StoreTransaction: IStoreTransaction {
+
     var originalID: UInt64? {
         transaction.originalID
     }
@@ -42,6 +43,22 @@ extension SK2StoreTransaction: IStoreTransaction {
     var productIdentifier: String {
         transaction.productID
     }
+
+    var productType: String {
+        switch transaction.productType {
+            case .autoRenewable:
+                return "AutoRenewable"
+            case .nonRenewable:
+                return "NonRenewable"
+            case .consumable:
+                return "Consumable"
+            case .nonConsumable:
+                return "NonConsumable"
+            default:
+                return "Other"
+        }
+    }
+
 
     var purchaseDate: Date {
         transaction.purchaseDate

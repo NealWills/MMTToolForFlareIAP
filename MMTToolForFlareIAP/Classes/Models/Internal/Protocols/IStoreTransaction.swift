@@ -11,6 +11,8 @@ import Foundation
 protocol IStoreTransaction: Sendable {
     /// The unique identifier for the product.
     var productIdentifier: String { get }
+    /// The Product Type
+    var productType: String { get }
     /// The date when the transaction occurred.
     var purchaseDate: Date { get }
     /// The date when the subscribe expire.

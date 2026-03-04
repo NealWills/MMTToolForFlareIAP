@@ -36,8 +36,13 @@ struct SK2StoreTransaction {
 @available(iOS 15.0, tvOS 15.0, watchOS 8.0, macOS 12.0, *)
 extension SK2StoreTransaction: IStoreTransaction {
 
+
     var originalID: UInt64? {
         transaction.originalID
+    }
+
+    var originalPurchaseDate: Date? {
+        transaction.originalPurchaseDate
     }
 
     var productIdentifier: String {
@@ -96,7 +101,7 @@ extension SK2StoreTransaction: IStoreTransaction {
         #if swift(>=6.0)
             transaction.price
         #else
-            nil
+        transaction.price
         #endif
     }
 
@@ -108,11 +113,51 @@ extension SK2StoreTransaction: IStoreTransaction {
                 transaction.currencyCode
             }
         #else
-            nil
+        if #available(iOS 16.0, macOS 13.0, watchOS 9.0, tvOS 16.0, *) {
+            transaction.currency?.identifier
+        } else {
+            transaction.currencyCode
+        }
         #endif
     }
 
     var appAccountToken: String? {
         transaction.appAccountToken?.uuidString
     }
+
+    var ownershipType: String? {
+        transaction.ownershipType.rawValue
+    }
+
+    var signedDate: Date? {
+        transaction.signedDate
+    }
+
+    func purchaseResultDidUpdate(statusBlock: ((String?)->())?) {
+
+        if #available(iOS 15.0, *) {
+
+            Task {
+                let status = await transaction.subscriptionStatus?.state
+                switch status {
+                    case .subscribed:
+                        statusBlock?("subscribed")
+                    case .expired:
+                        statusBlock?("expired")
+                    case .inBillingRetryPeriod:
+                        statusBlock?("inBillingRetryPeriod")
+                    case .inGracePeriod:
+                        statusBlock?("inGracePeriod")
+                    case .revoked:
+                        statusBlock?("revoked")
+                    default:
+                        statusBlock?(nil)
+                }
+            }
+        } else {
+            statusBlock?(nil)
+        }
+
+    }
+
 }

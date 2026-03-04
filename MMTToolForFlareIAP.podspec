@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MMTToolForFlareIAP'
-  s.version          = '0.1.10'
+  s.version          = '0.1.11'
   s.summary          = 'A convenient wrapper and packaging tool for Flare IAP'
 
 # This description is used to generate tags and improve search results.
@@ -35,6 +35,8 @@ Features:
 - Product type retrieval support
 - Environment information (String) query support in transactions
 - Direct environment access in transaction objects (removed from separate parameters)
+- Fixed price and currency retrieval for transactions
+- Enhanced transaction metadata support (ownership type, signed date)
                        DESC
 
   s.homepage         = 'https://github.com/NealWills/MMTToolForFlareIAP.git'

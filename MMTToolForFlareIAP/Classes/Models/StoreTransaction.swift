@@ -53,6 +53,10 @@ extension StoreTransaction: IStoreTransaction {
         storeTransaction.originalID
     }
 
+    var originalPurchaseDate: Date? {
+        storeTransaction.originalPurchaseDate
+    }
+
     public var productIdentifier: String {
         storeTransaction.productIdentifier
     }
@@ -116,6 +120,10 @@ extension StoreTransaction: IStoreTransaction {
 
     public var appAccountToken: String? {
         storeTransaction.appAccountToken
+    }
+
+    func purchaseResultDidUpdate(statusBlock: ((String?) -> Void)?) {
+        storeTransaction.purchaseResultDidUpdate(statusBlock: statusBlock)
     }
 }
 

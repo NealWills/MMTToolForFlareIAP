@@ -46,6 +46,10 @@ protocol IStoreTransaction: Sendable {
     var originalID: UInt64? { get }
 
     var appAccountToken: String? { get }
+
+    var originalPurchaseDate: Date? { get }
+
+    func purchaseResultDidUpdate(statusBlock: ((String?) -> Void)?)
 }
 
 /// Default implementation of the currency property for backward compatibility.

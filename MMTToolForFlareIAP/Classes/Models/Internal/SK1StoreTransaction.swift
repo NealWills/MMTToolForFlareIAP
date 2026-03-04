@@ -28,7 +28,6 @@ struct SK1StoreTransaction {
 
 extension SK1StoreTransaction: IStoreTransaction {
 
-    
     var originalID: UInt64? {
         nil
     }
@@ -88,4 +87,14 @@ extension SK1StoreTransaction: IStoreTransaction {
     var appAccountToken: String? {
         return nil
     }
+
+    var originalPurchaseDate: Date? {
+        return nil
+    }
+
+    func purchaseResultDidUpdate(statusBlock: ((String?) -> ())?) {
+        statusBlock?(nil)
+    }
+
+
 }

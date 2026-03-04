@@ -28,7 +28,9 @@ MMTToolForFlareIAP is a comprehensive wrapper and packaging tool for the [Flare 
 - ⏰ **Expiration Query (0.1.6)**: Subscription ticket expiration time query support
 - 🧪 **Sandbox Detection**: Indicates receipt environment when checking subscriptions
 - 🏷️ **Product Type (0.1.7)**: Product type retrieval support
-- 🔓 **Public API**: Enhanced public API accessibility for better integration
+- � **Price & Currency (0.1.11)**: Accurate price and currency information retrieval
+- 📋 **Transaction Metadata (0.1.11)**: Ownership type and signed date support
+- �🔓 **Public API**: Enhanced public API accessibility for better integration
 
 ## Requirements
 
@@ -99,9 +101,11 @@ The transaction object provides access to the following properties:
 | `quantity` | Int | Quantity of items in the transaction |
 | `jwsRepresentation` | String | JWS representation of the transaction |
 | `environment` | String | Environment (sandbox or production) |
-| `price` | String | Price of the subscription |
+| `price` | Decimal | Price of the subscription (supports accurate decimal values) |
 | `currency` | String | Currency code (e.g., "USD") |
 | `appAccountToken` | String? | App account token associated with the transaction |
+| `ownershipType` | String? | Ownership type of the transaction (0.1.11) |
+| `signedDate` | Date? | Date when the transaction was signed (0.1.11) |
 
 #### Complete Example
 
@@ -147,6 +151,11 @@ MMTToolForFlareIAP is built with a modular architecture:
 - **Logger**: Comprehensive logging system with formatters and printers
 
 ## What's New
+
+### Version 0.1.11
+- **Fixed price and currency retrieval**: Corrected price (now returns Decimal for precise values) and currency information to accurately reflect transaction data from StoreKit 2
+- **Added ownership type support**: New `ownershipType` property in transaction metadata provides ownership classification
+- **Added signed date support**: New `signedDate` property in transaction metadata indicates when the transaction was signed
 
 ### Version 0.1.10
 - Added comprehensive English documentation and comments to all public methods

@@ -64,21 +64,46 @@ let flare = Flare.shared
 ### Check Current Subscriptions
 
 ```swift
-Flare.checkCurrentSubscriptions { transactions, isSandbox in
-    guard let transactions = transactions else {
+Flare.checkCurrentSubscriptions { transactionList in
+    guard let transactionList = transactionList else {
         print("Failed to fetch subscriptions")
         return
     }
 
-    print("Sandbox environment: \(isSandbox)")
-    
-    for transaction in transactions {
-        print("Transaction ID: \(transaction.id)")
-        print("Expiration Date: \(transaction.expirationDate ?? "N/A")")
-        // Handle transaction data
+    for transaction in transactionList {
+        print("Product ID: \(transaction.productIdentifier)")
+        print("Expiration Date: \(transaction.subscribeExpireDate ?? "N/A")")
+        print("Purchase Date: \(transaction.purchaseDate ?? "N/A")")
+        print("Environment: \(transaction.environment)")
+        print("Price: \(transaction.price) \(transaction.currency)")
     }
 }
 ```
+
+#### Transaction Properties
+
+The transaction object provides access to the following properties:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `originalID` | String | Original transaction identifier |
+| `productIdentifier` | String | Product identifier for the subscription |
+| `productType` | String | Type of the product |
+| `purchaseDate` | Date? | Date when the subscription was purchased |
+| `subscribeExpireDate` | Date? | Date when the subscription expires |
+| `hasKnownPurchaseDate` | Bool | Indicates if purchase date is known |
+| `transactionIdentifier` | String | Unique transaction identifier |
+| `hasKnownTransactionIdentifier` | Bool | Indicates if transaction identifier is known |
+| `quantity` | Int | Quantity of items in the transaction |
+| `jwsRepresentation` | String | JWS representation of the transaction |
+| `environment` | String | Environment (sandbox or production) |
+| `price` | String | Price of the subscription |
+| `currency` | String | Currency code (e.g., "USD") |
+| `appAccountToken` | String? | App account token associated with the transaction |
+
+#### Complete Example
+
+For a complete working example with detailed implementation, see [USAGE_EXAMPLE.md](USAGE_EXAMPLE.md).
 
 ### Logging Configuration
 
@@ -120,6 +145,11 @@ MMTToolForFlareIAP is built with a modular architecture:
 - **Logger**: Comprehensive logging system with formatters and printers
 
 ## What's New
+
+### Version 0.1.9
+- Added environment information (String) query support in transaction data
+- Removed sandbox environment parameter from subscription history request method
+- Environment information is now directly available in transaction objects
 
 ### Version 0.1.8
 - Added appAccountToken retrieval on StoreTransaction

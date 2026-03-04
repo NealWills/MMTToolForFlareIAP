@@ -12,7 +12,7 @@ import StoreKit
 public extension Flare {
     /// Checks current subscriptions for iOS 15.0+, falling back to older implementation for earlier versions.
     /// - Parameter resultBlock: Callback block that returns an array of StoreTransaction objects or nil if an error occurs.
-    class func checkCurrentSubscriptions(_ resultBlock: ((_ storeTransactionList: [StoreTransaction]?, _ isSandbox: Bool) -> Void)?) {
+    class func checkCurrentSubscriptions(_ resultBlock: ((_ storeTransactionList: [StoreTransaction]?) -> Void)?) {
         if #available(iOS 15.0, *) {
             checkCurrentSubscriptions15AndUp(resultBlock)
         } else {
@@ -24,17 +24,8 @@ public extension Flare {
     /// Uses async/await to fetch all transactions from the device and verifies them.
     /// - Parameter resultBlock: Callback block that receives the verified transactions list and a boolean indicating if the environment is sandbox.
     @available(iOS 15.0, *)
-    fileprivate class func checkCurrentSubscriptions15AndUp(_ resultBlock: ((_ storeTransactionList: [StoreTransaction]?, _ isSandbox: Bool) -> Void)?) {
+    fileprivate class func checkCurrentSubscriptions15AndUp(_ resultBlock: ((_ storeTransactionList: [StoreTransaction]?) -> Void)?) {
         Task {
-
-            var isSandbox = false
-
-            // Check if running in sandbox environment
-            if let receiptURL = Bundle.main.appStoreReceiptURL {
-                isSandbox = receiptURL.path.contains("sandboxReceipt") ||
-                    receiptURL.path.contains("StoreKitTest")
-                // print("Sandbox environment: \(isSandbox)")
-            }
 
             var transactionList: [StoreTransaction] = []
             for await result in Transaction.all {
@@ -53,15 +44,15 @@ public extension Flare {
                 }
             }
 
-            resultBlock?(transactionList, isSandbox)
+            resultBlock?(transactionList)
         }
     }
 
     /// Fallback implementation for checking subscriptions on iOS versions below 15.0.
     /// Currently returns nil as StoreKit 2 is not available on older iOS versions.
     /// - Parameter resultBlock: Callback block that receives the transactions list or nil.
-    fileprivate class func checkCurrentSubscriptions15Down(_ resultBlock: ((_ storeTransactionList: [StoreTransaction]?, _ isSandbox: Bool) -> Void)?) {
+    fileprivate class func checkCurrentSubscriptions15Down(_ resultBlock: ((_ storeTransactionList: [StoreTransaction]?) -> Void)?) {
         // StoreKit 2 is unavailable on iOS < 15.0, return nil
-        resultBlock?(nil, false)
+        resultBlock?(nil)
     }
 }

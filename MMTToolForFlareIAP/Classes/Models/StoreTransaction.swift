@@ -93,6 +93,19 @@ extension StoreTransaction: IStoreTransaction {
         storeTransaction.environment
     }
 
+    public var environmentStr: String? {
+        switch storeTransaction.environment {
+            case .production:
+                return "production"
+            case .sandbox:
+                return "sandbox"
+            case .xcode:
+                return "xcode"
+            default:
+                return "other"
+        }
+    }
+
     public var price: Decimal? {
         storeTransaction.price
     }

@@ -9,7 +9,9 @@
 
 ## Overview
 
-MMTToolForFlareIAP is a comprehensive wrapper and packaging tool for the Flare IAP framework (synced with Flare 3.3.0). It provides a simplified and unified API for implementing in-app purchases (IAP) in iOS applications, built on top of the robust Flare framework. This library makes it easy to integrate subscription and transaction management into your MMT projects with minimal boilerplate code.
+MMTToolForFlareIAP is a comprehensive wrapper and packaging tool for the [Flare IAP framework](https://github.com/space-code/flare.git) (synced with Flare 3.3.0). It provides a simplified and unified API for implementing in-app purchases (IAP) in iOS applications, built on top of the robust open-source [Flare framework](https://github.com/space-code/flare.git) by Space Code. This library makes it easy to integrate subscription and transaction management into your MMT projects with minimal boilerplate code.
+
+**Note**: The name "Flare" in MMTToolForFlareIAP refers to the excellent [Flare framework](https://github.com/space-code/flare.git). This library is built as a wrapper and enhancement on top of that framework.
 
 ## Features
 
@@ -146,6 +148,11 @@ MMTToolForFlareIAP is built with a modular architecture:
 
 ## What's New
 
+### Version 0.1.10
+- Added comprehensive English documentation and comments to all public methods
+- Clarified Flare framework attribution and acknowledgments
+- Enhanced README with Flare open-source project attribution
+
 ### Version 0.1.9
 - Added environment information (String) query support in transaction data
 - Removed sandbox environment parameter from subscription history request method
@@ -196,6 +203,12 @@ If you encounter any issues or have questions, please open an issue on the [GitH
 ## Author
 
 Neal Wills, AoiiiiYuki@outlook.com
+
+## Acknowledgments
+
+This library is built as a wrapper and enhancement on top of the excellent [Flare](https://github.com/space-code/flare.git) framework by Space Code. We are deeply grateful to the authors and contributors of the Flare project for creating such a robust and well-designed IAP framework. The "Flare" in MMTToolForFlareIAP represents this outstanding open-source library.
+
+**Special thanks to the Flare team for their great work!**
 
 ## License
 

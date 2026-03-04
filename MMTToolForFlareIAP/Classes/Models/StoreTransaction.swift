@@ -53,7 +53,7 @@ extension StoreTransaction: IStoreTransaction {
         storeTransaction.originalID
     }
 
-    var originalPurchaseDate: Date? {
+    public var originalPurchaseDate: Date? {
         storeTransaction.originalPurchaseDate
     }
 
@@ -99,14 +99,14 @@ extension StoreTransaction: IStoreTransaction {
 
     public var environmentStr: String? {
         switch storeTransaction.environment {
-            case .production:
-                return "production"
-            case .sandbox:
-                return "sandbox"
-            case .xcode:
-                return "xcode"
-            default:
-                return "other"
+        case .production:
+            return "production"
+        case .sandbox:
+            return "sandbox"
+        case .xcode:
+            return "xcode"
+        default:
+            return "other"
         }
     }
 

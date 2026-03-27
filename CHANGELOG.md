@@ -4,6 +4,15 @@ All notable changes to this project are documented in this file.
 
 The format loosely follows Keep a Changelog and is based on the Git commit history.
 
+## [0.1.15] - 2026-03-27
+
+### Fixed
+- Fixed renewal subscription query callback timing so the result block is invoked after the full transaction list has been processed.
+- Cleaned up the renewal query implementation to avoid redundant initialization and improve callback consistency.
+
+### Changed
+- Updated release notes and podspec metadata for the 0.1.15 publish.
+
 ## [0.1.12] - 2026-03-27
 
 ### Added

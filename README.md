@@ -27,6 +27,7 @@ MMTToolForFlareIAP is a comprehensive wrapper and packaging tool for the [Flare 
 - 🎚️ **Log Level**: Public log level control via `Flare.shared.logLevel`
 - ⏰ **Expiration Query (0.1.6)**: Subscription ticket expiration time query support
 - 🔄 **Renew Query (0.1.12)**: Subscription renewal information query support
+- ✅ **Renew Callback Fix (0.1.15)**: Renewal query callbacks now return the fully aggregated result set
 - 🧪 **Sandbox Detection**: Indicates receipt environment when checking subscriptions
 - 🏷️ **Product Type (0.1.7)**: Product type retrieval support
 - � **Price & Currency (0.1.11)**: Accurate price and currency information retrieval
@@ -154,6 +155,10 @@ MMTToolForFlareIAP is built with a modular architecture:
 ## What's New
 
 For complete release history based on commit records, see [CHANGELOG.md](CHANGELOG.md).
+
+### Version 0.1.15
+- **Fixed renew callback timing**: The renewal query callback now executes after all transactions have been processed.
+- **Improved renew result consistency**: Aggregated renewal info is returned in a single stable callback flow.
 
 ### Version 0.1.12
 - **Added Flare Renew info query**: Introduced public APIs to query subscription renewal information from transaction lists.

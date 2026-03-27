@@ -25,35 +25,32 @@ public extension Flare {
 
     /// Fetches current subscriptions using StoreKit 2 API for iOS 15.0 and above.
     /// Uses async/await to fetch all transactions from the device and verifies them.
-    /// - Parameter resultBlock: Callback block that receives the verified transactions list and a boolean indicating if the environment is sandbox.
+    /// - Parameter resultBlock: Callback block that receives the aggregated renewal info list after all transactions are processed.
     @available(iOS 15.0, *)
     fileprivate class func checkRenewSubscriptions15AndUp(transactionList: [StoreTransaction], resultBlock: ((_ renewInfoList: [(RenewalInfo, RenewalState?)]?) -> Void)?) {
         Task {
-            
+
             var list: [(RenewalInfo, RenewalState?)] = []
-            for i in 0 ..< transactionList.count {
-                let transaction = transactionList[i]
+            for transaction in transactionList {
                 let sk2Transaction = transaction.storeTransaction as? SK2StoreTransaction
                 let storeTransaction = sk2Transaction?.transaction
                 let subscriptionStatus = await storeTransaction?.subscriptionStatus
                 let renewalState = subscriptionStatus?.renewalState
                 let renewalInfo = subscriptionStatus?.renewalInfo
-                let subscriptionRenewalInfo = subscriptionStatus?.subscriptionRenewalInfo
                 switch renewalInfo {
-                case .unverified(let signedType, let verificationError):
-                    let info = RenewalInfo.init(renewalInfo: signedType)
+                case let .unverified(signedType, _):
+                    let info = RenewalInfo(renewalInfo: signedType)
                     let item = (info, renewalState)
                     list.append(item)
-                case .verified(let signedType):
-                    let info = RenewalInfo.init(renewalInfo: signedType)
+                case let .verified(signedType):
+                    let info = RenewalInfo(renewalInfo: signedType)
                     let item = (info, renewalState)
                     list.append(item)
-                    break
                 default:
                     break
                 }
-                resultBlock?(list)
             }
+            resultBlock?(list)
         }
     }
 

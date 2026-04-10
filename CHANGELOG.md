@@ -4,6 +4,11 @@ All notable changes to this project are documented in this file.
 
 The format loosely follows Keep a Changelog and is based on the Git commit history.
 
+## [0.1.16] - 2026-04-10
+
+### Changed
+- Routine maintenance and stability updates.
+
 ## [0.1.15] - 2026-03-27
 
 ### Fixed
